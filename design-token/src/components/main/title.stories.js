@@ -1,3 +1,4 @@
+import React from "react";
 import Title from "./title";
 
 // title : 컴포넌트 이름으로, '/'를 넣어 카테고리화 할 수 있다.
@@ -23,7 +24,7 @@ export const RedTitle = Template.bind({});
 
 // 만들어준 스토리의 전달인자를 작성.
 RedTitle.args = {
-    titile: "Red Title",
+    title: "Red Title",
     textColor: "red",
 };
 
@@ -34,4 +35,8 @@ export const BlueTitle = Template.bind({});
 BlueTitle.args = {
     title: "Blue Title",
     textColor: "blue",
+};
+
+export const StoryBookTitle = (args) => {
+    return <Title {...args} />;
 };
