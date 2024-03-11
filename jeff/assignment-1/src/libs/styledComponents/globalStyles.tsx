@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { FONT_SIZE } from './tokens'
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -26,45 +27,43 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-        font-size:${({ theme }) => theme.FONT_SIZE.huge};
+        font-size:${FONT_SIZE.huge};
     }
 
     h2 {
-        font-size:${({ theme }) => theme.FONT_SIZE.big};
+        font-size:${FONT_SIZE.big};
         font-weight: bold;
     }
 
     h2 {
-        font-size:${({ theme }) => theme.FONT_SIZE.large};
+        font-size:${FONT_SIZE.large};
         font-weight: bold;
     }
 
     h3 {
-        font-size:${({ theme }) => theme.FONT_SIZE.medium};
+        font-size:${FONT_SIZE.medium};
         font-weight: bold;
     }
 
     h4 {
-        font-size:${({ theme }) => theme.FONT_SIZE.small};
+        font-size:${FONT_SIZE.small};
         font-weight: bold;
     }
 
     button {
         border: none;
-        font-family: 'GwangyangSunshine-Light'
+        outline: none;
     }
 
     input {
         outline: none;
-        font-family: 'GwangyangSunshine-Light'
     }
 
     textarea {
-        font-size:${({ theme }) => theme.FONT_SIZE.small};
-        font-family: 'GwangyangSunshine-Light'
+        font-size:${FONT_SIZE.small};
     }
 
     p, div, span {
-        font-size:${({ theme }) => theme.FONT_SIZE.small};
+        font-size:${FONT_SIZE.small};
     }
 `
