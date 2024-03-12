@@ -1,7 +1,7 @@
-import "./App.css"
+import { MBInput } from "./stories"
 
 function App() {
-  return <></>
+  return <MBInput hasButton={true} />
 }
 
 export default App
