@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { MBButton } from "."
 
 const meta = {
-  title: "MBComponent",
+  title: "MBComponent/MBButton",
   component: MBButton,
   parameters: {
     layout: "centered",
