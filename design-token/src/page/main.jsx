@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { COLORS } from "../constants/design-tokens/color";
 import Title from "../components/main/title";
-import sizes from "../constants/design-tokens/size";
 import Select from "../components/common/select";
-import { fontSize } from "../constants/design-tokens/font-size";
+import Input from "../components/common/input";
+import { colors } from "../constants/design-tokens/color";
+import Button from "../components/common/button";
 
 const Main = () => {
     const dropDownOption = [
@@ -13,13 +13,28 @@ const Main = () => {
     ];
     return (
         <Wrapper>
-            <Title title={"title"} textColor={COLORS.DANGER} />
+            <Title title={"title"} textColor={colors.text.neonOrange} />
             <Select
                 option={dropDownOption}
-                size="medium"
-                color={COLORS.NEON_GREEN}
-                fontSize={fontSize.small}
-                backgroundColor={COLORS.NEON_ORANGE}
+                size={"medium"}
+                color={"neonPurple"}
+                fontSize={"medium"}
+                backgroundColor={"darkBlue"}
+            />
+            <Input
+                placeholder={"음?"}
+                size={"small"}
+                color={"neonOrange"}
+                fontSize={"large"}
+            />
+            <Button
+                text={"버튼입니다"}
+                color={"neonYellow"}
+                size={"small"}
+                fontSize="large"
+                backgroundColor={"darkRed"}
+                borderColor={"neonGreen"}
+                border={"primary"}
             />
         </Wrapper>
     );
@@ -29,5 +44,5 @@ export default Main;
 const Wrapper = styled.div`
     width: 100px;
     height: 100px;
-    background-color: ${COLORS.GRAY[400]};
+    background-color: ${colors.background.default};
 `;

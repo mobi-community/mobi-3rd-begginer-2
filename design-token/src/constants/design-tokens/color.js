@@ -1,27 +1,35 @@
-export const COLORS = {
-    GRAY: {
-        100: "#f0f0f0",
-        200: "#d9d9d9",
-        300: "#bfbfbf",
-        400: "#a6a6a6",
-        500: "#8c8c8c",
-        600: "#737373",
-        700: "#595959",
-        800: "#404040",
-        900: "#262626",
+export const colors = {
+    text: {
+        default: "#e0e0e0", // 밝은 회색
+        primary: "#08f7fe", // 네온 블루
+        secondary: "#fe53bb", // 네온 핑크
+        neonGreen: "#00ff95", // 네온 그린
+        neonOrange: "#ff5050", // 네온 오렌지
+        neonPurple: "#b620e0", // 네온 퍼플
+        neonYellow: "#fdfd96", // 네온 옐로우
     },
-    PRIMARY: "#ff00ff", // 네온 핑크
-    SECONDARY: "#00ffff", // 네온 블루
-    SUCCESS: "#00ff00", // 네온 그린
-    INFO: "#7600ff", // 네온 보라
-    WARNING: "#ff007f", // 네온 핑크/레드
-    DANGER: "#ff0000", // 네온 레드
-    LIGHT: "#f8f9fa",
-    DARK: "#343a40",
-    NEON_BLUE: "#4d4dff", // 밝은 네온 블루
-    NEON_GREEN: "#33ff33", // 밝은 네온 그린
-    NEON_ORANGE: "#ff6600", // 네온 오렌지
-    NEON_PINK: "#ff66ff", // 밝은 네온 핑크
-    NEON_PURPLE: "#bf00ff", // 네온 퍼플
-    CYBER_YELLOW: "#fcf951", // 네온 노란색
+    background: {
+        default: "#101010", // 어두운 회색
+        primary: "#08f7fe", // 네온 블루
+        secondary: "#fe53bb", // 네온 핑크
+        darkBlue: "#120078", // 어두운 블루
+        darkPurple: "#32004b", // 어두운 퍼플
+        darkRed: "#8b0000", // 어두운 레드
+    },
+    border: {
+        default: "#333333", // 어두운 회색
+        primary: "#08f7fe", // 네온 블루
+        secondary: "#fe53bb", // 네온 핑크
+        neonGreen: "#00ff95", // 네온 그린
+        neonOrange: "#ff5050", // 네온 오렌지
+    },
+    primary: "#08f7fe", // 네온 블루
+    secondary: "#fe53bb", // 네온 핑크
+    success: "#00ff95", // 네온 그린
+    info: "#00b3ff", // 밝은 블루
+    warning: "#ffeb3b", // 밝은 노랑
+    danger: "#ff2079", // 강렬한 핑크
+    neonOrange: "#ff5050", // 네온 오렌지
+    neonPurple: "#b620e0", // 네온 퍼플
+    neonYellow: "#fdfd96", // 네온 옐로우
 };

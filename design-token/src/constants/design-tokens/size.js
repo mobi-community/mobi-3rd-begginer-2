@@ -1,18 +1,57 @@
 const sizes = {
     input: {
-        small: { width: "200px", height: "30px" },
-        medium: { width: "300px", height: "35px" },
-        large: { width: "400px", height: "40px" },
+        small: {
+            padding: "8px 12px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+        },
+        medium: {
+            padding: "12px 16px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+        },
+        large: {
+            padding: "16px 20px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+        },
     },
     button: {
-        smail: { padding: "5px 10px" },
-        medium: { padding: "10px 20px" },
-        large: { padding: "15px 30px" },
+        small: {
+            width: "100px",
+            height: "50px",
+            borderRadius: "4px",
+            border: "1px solid",
+        },
+        medium: {
+            width: "300px",
+            height: "65px",
+            borderRadius: "4px",
+            border: "1px solid",
+        },
+        large: {
+            width: "400px",
+            height: "80px",
+            borderRadius: "4px",
+            border: "1px solid",
+        },
     },
     select: {
-        smail: { width: "100px", height: "30px" },
-        medium: { width: "200px", height: "35px" },
-        large: { width: "300px", height: "40px" },
+        small: {
+            padding: "8px 12px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+        },
+        medium: {
+            padding: "12px 16px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+        },
+        large: {
+            padding: "16px 20px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+        },
     },
 };
 
