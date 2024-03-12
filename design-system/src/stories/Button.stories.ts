@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./Button";
+import { COLOR } from "../styled-component/tokens/color";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -26,6 +27,7 @@ export const Primary: Story = {
   args: {
     primary: true,
     label: "Button",
+    backgroundColor: COLOR.palette.orange.light,
   },
 };
 
