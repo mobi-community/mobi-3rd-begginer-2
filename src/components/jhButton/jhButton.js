@@ -1,10 +1,12 @@
 import { css, styled } from "styled-components";
 import { COROLS } from "../../styles/color";
 import React from "react";
+import PropTypes from "prop-types";
 
 const JHButton = ({ children, variant, size, font, ...rest }) => {
+  const mode = variant ? "primary" : "secondary";
   return (
-    <Button variant={variant} size={size} font={font} {...rest}>
+    <Button variant={mode} size={size} font={font} {...rest}>
       {children}
     </Button>
   );
@@ -65,3 +67,40 @@ const Button = styled.button`
   ${({ size }) => sizeCSS[size]} 
   ${({ font }) => fontCSS[font]};
 `;
+
+//
+JHButton.propTypes = {
+  /**
+   * primary = true,  secondary = false
+   */
+  variant: PropTypes.bool,
+  /**
+   * 색상 종류
+   */
+  // backgroundColor: PropTypes.string,
+  /**
+   * 사이즈 종류
+   */
+  size: PropTypes.oneOf(["smallCircle", "mediumCircle", "largeCircle"]),
+  /**
+   * Button contents
+   */
+  label: PropTypes.string,
+  /**
+   * Optional click handler
+   */
+  onClick: PropTypes.func,
+  /**
+   *폰트?
+   */
+  font: PropTypes.oneOf(["small", "medium", "large"]),
+};
+
+JHButton.defaultProps = {
+  // backgroundColor: null,
+  variant: true,
+  size: "mediumCircle",
+  font: "medium",
+  label: "click",
+  onClick: undefined,
+};
