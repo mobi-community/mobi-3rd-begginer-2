@@ -1,46 +1,46 @@
 import { css, styled } from "styled-components";
 
-const JHButton = ({ children, variant, size, font, ...rest }) => {
+const JHInput = ({ variant, size, font, ...inputProps }) => {
   return (
-    <Button variant={variant} size={size} font={font} {...rest}>
-      {children}
-    </Button>
+    <>
+      <Input variant={variant} size={size} font={font} {...inputProps} />
+    </>
   );
 };
-export default JHButton;
+export default JHInput;
 
 const variantCSS = {
   primary: css`
-    background-color: #ff9d2a;
+    background-color: #ffce95;
     color: #fff;
     &:hover {
-      background-color: #ffce95;
+      background-color: #fff;
+      color: #ffce95;
+      border: 1px solid #ffce95;
     }
   `,
 
   secondary: css`
-    background-color: #0f6b00;
+    background-color: #5fb751;
     color: #fff;
     &:hover {
-      background-color: #5fb751;
+      background-color: #fff;
+      color: #0f6b00;
+      border: 1px solid #5fb751;
     }
   `,
 };
 const sizeCSS = {
   smallCircle: css`
-    width: 30px;
-    height: 30px;
+    width: 297px;
+    height: 41px;
     border-radius: 50%;
   `,
-  mediumCircle: css`
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  `,
+
   largeCircle: css`
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+    width: 550px;
+    height: 44px;
+    border-radius: 50px;
   `,
 };
 const fontCSS = {
@@ -58,8 +58,7 @@ const fontCSS = {
   `,
 };
 
-const Button = styled.button`
-  cursor: pointer;
+const Input = styled.button`
   transition: all 0.6s;
   /* button reset CSS */
   border: none;
@@ -67,5 +66,5 @@ const Button = styled.button`
 
   ${({ variant }) => variantCSS[variant]}
   ${({ size }) => sizeCSS[size]}
-  ${({ font }) => fontCSS[font]}
+    ${({ font }) => fontCSS[font]}
 `;
