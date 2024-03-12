@@ -19,14 +19,14 @@ export const A1Modal = ({
 				<S.Divider />
 				{contentText}
 			</S.ContentContainer>
-			<S.ButtonContainer>
+			<S.ButtonWrapper>
 				<S.Button
 					$system={system}
 					{...{ onClick }}
 				>
 					ㅋㅋㅋ
 				</S.Button>
-			</S.ButtonContainer>
+			</S.ButtonWrapper>
 		</S.ModalContainer>
 	)
 }

@@ -6,7 +6,8 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;  
         font-weight: 200;
 
         -ms-overflow-style: none;
@@ -69,3 +70,9 @@ export const GlobalStyles = createGlobalStyle`
         font-size:${FONT_SIZE.small};
     }
 `
+
+// export const decorators = [
+// 	withThemeFromJSXProvider({
+// 		GlobalStyles,
+// 	}),
+// ]

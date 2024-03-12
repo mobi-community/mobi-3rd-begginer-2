@@ -32,6 +32,7 @@ function App() {
 				<A1Modal
 					size='small'
 					system='alert'
+					onClick={()=>{}}
 				/>
 			</div>
 			<h1>Vite + React</h1>
