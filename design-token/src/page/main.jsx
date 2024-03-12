@@ -4,8 +4,15 @@ import Select from "../components/common/select";
 import Input from "../components/common/input";
 import { colors } from "../constants/design-tokens/color";
 import Button from "../components/common/button";
+import CheckBox from "../components/common/check-box";
+import { useState } from "react";
 
 const Main = () => {
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleCheckedChange = (e) => {
+        setIsChecked(e.target.checked);
+    };
     const dropDownOption = [
         { value: "option1", label: "옵션 1" },
         { value: "option2", label: "옵션 2" },
@@ -22,19 +29,32 @@ const Main = () => {
                 backgroundColor={"darkBlue"}
             />
             <Input
-                placeholder={"음?"}
+                placeholder={"플레이스 홀더"}
                 size={"small"}
-                color={"neonOrange"}
-                fontSize={"large"}
+                theme={"neonPinkDark"}
             />
             <Button
                 text={"버튼입니다"}
-                color={"neonYellow"}
-                size={"small"}
-                fontSize="large"
-                backgroundColor={"darkRed"}
-                borderColor={"neonGreen"}
-                border={"primary"}
+                theme={"neonGreenDark"}
+                size={"medium"}
+            />
+            <CheckBox
+                label={"라벨"}
+                labelColor={"neonGreen"}
+                size={"medium"}
+                color={"darkBlue"}
+                borderColor={"secondary"}
+                checked={isChecked}
+                onChange={handleCheckedChange}
+            />
+            <CheckBox
+                label={"라벨2"}
+                labelColor={"neonGreen"}
+                size={"medium"}
+                color={"darkBlue"}
+                borderColor={"secondary"}
+                checked={isChecked}
+                onChange={handleCheckedChange}
             />
         </Wrapper>
     );

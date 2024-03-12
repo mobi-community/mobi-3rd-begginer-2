@@ -10,19 +10,15 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     size: "medium",
-    color: "primary",
+    theme: "neonGreenDark",
     text: "확인",
-    backgroundColor: "darkPurple",
-    borderColor: "primary",
 };
 
 export const Large = Template.bind({});
 Large.args = {
     size: "large",
-    color: "primary",
-    text: "Large 버튼",
-    backgroundColor: "secondary",
-    borderColor: "primary",
+    theme: "neonOrangeYellow",
+    text: "확인",
 };
 
 export const SButton = (args) => <Button {...args}></Button>;
