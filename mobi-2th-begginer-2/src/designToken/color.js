@@ -2,6 +2,8 @@ const SYSTEM = {
     error: "#E50045",
     alert: "#FFAA2A",
     success: "#05B4FF",
+    black: "#000000",
+    white: "#FFF",
 };
 
 //라벤더
@@ -14,16 +16,7 @@ const MAIN = {
     800: "#8E7AB5",
     1000: "#756AB6",
 };
-const COMMON = {
-    0: "#000000",
-    200: "#363636",
-    400: "#6F6F6F",
-    600: "#A8A8A8",
-    800: "#D8D8D8",
-    900: "#F1F1F1",
-    1000: "#FFFFFF",
-};
-const PALETTE = {
+const PALLETE = {
     teal: {
         base: "#709FB0",
         light: "#A0C1B8",
@@ -41,7 +34,6 @@ const PALETTE = {
     peach: {
         base: "#EFB495",
         light: "#EFD595",
-        weight: "#154A65",
     },
     blue: "#7BD3EA",
     lemon: "#F6F7C4",
@@ -49,6 +41,5 @@ const PALETTE = {
 export const COLOR = {
     SYSTEM,
     MAIN,
-    COMMON,
-    PALETTE,
+    PALLETE,
 };
