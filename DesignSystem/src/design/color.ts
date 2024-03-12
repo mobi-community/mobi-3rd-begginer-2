@@ -16,9 +16,9 @@ export const COLOR = {
       thick: "#2964C7",
     },
     mainOppsite: {
-      light: "#B1B773",
-      normal: "#A9B241",
-      thick: "#CDDB13",
+      light: "#78B877",
+      normal: "#8EB33A",
+      thick: "#58B236",
     },
   },
 } as const
