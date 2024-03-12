@@ -38,7 +38,8 @@ export const ButtonBase = styled.button<$ButtonBaseType>`
 	height: fit-content;
 	min-width: 5rem;
 	min-height: 5rem;
-
+	outline: none;
+	border: none;
 	padding: 1rem 1.5rem;
 
 	color: ${COLOR.grayScale.lightGray};

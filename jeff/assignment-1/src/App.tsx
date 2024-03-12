@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import { A1Button } from './components/a1Button'
+import { A1Modal } from './components'
 import viteLogo from '/vite.svg'
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
 	return (
 		<>
 			<div>
-				<A1Button>ㅋㅋㅋ</A1Button>
 				<a
 					href='https://vitejs.dev'
 					target='_blank'
@@ -30,6 +29,10 @@ function App() {
 						alt='React logo'
 					/>
 				</a>
+				<A1Modal
+					size='small'
+					system='alert'
+				/>
 			</div>
 			<h1>Vite + React</h1>
 			<div className='card'>

@@ -7,6 +7,8 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
 
+        font-weight: 200;
+
         -ms-overflow-style: none;
         scrollbar-width: none;
         &::-webkit-scrollbar {
