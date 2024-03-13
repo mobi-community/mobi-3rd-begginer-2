@@ -10,6 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/components",
     element: <Components />,
+    children: [{ path: "textcard" }],
   },
 ])
 
