@@ -20,13 +20,11 @@ const Main = () => {
     ];
     return (
         <Wrapper>
-            <Title title={"title"} textColor={colors.text.neonOrange} />
+            {/* <Title title={"title"} textColor={colors.text.neonOrange} /> */}
             <Select
                 option={dropDownOption}
                 size={"medium"}
-                color={"neonPurple"}
-                fontSize={"medium"}
-                backgroundColor={"darkBlue"}
+                theme={"neonGreenDarkRed"}
             />
             <Input
                 placeholder={"플레이스 홀더"}
