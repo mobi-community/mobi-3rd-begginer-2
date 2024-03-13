@@ -21,4 +21,21 @@ export const COLOR = {
       thick: "#58B236",
     },
   },
+  system: {
+    warning: {
+      light: "#C69F9A",
+      normal: "#E57B6D",
+      thick: "#E1270D",
+    },
+    positive: {
+      light: "#B0D4E0",
+      normal: "#5DD0E5",
+      thick: "#12A8C7",
+    },
+    notice: {
+      light: "#D1C49F",
+      normal: "#E6E368",
+      thick: "#E1DE00",
+    },
+  },
 } as const
