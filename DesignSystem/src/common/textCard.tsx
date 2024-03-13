@@ -5,12 +5,12 @@ import { COLOR, FONT_SIZE } from "../design"
 type TextCardProps = HTMLAttributes<HTMLDivElement> & {
   theme: ThemeCssType
   size: SizeCssType
-  testPosition?: testPositionType
+  $textposition?: textPositionType
 }
 
 type ThemeCssType = "warning" | "positive" | "notice"
 type SizeCssType = "small" | "medium" | "large"
-type testPositionType = "start" | "center" | "end"
+type textPositionType = "start" | "center" | "end"
 
 const ThemeCss = {
   warning: css`
@@ -51,14 +51,14 @@ const SizeCss = {
 const TextCard = ({
   theme,
   size = "small",
-  testPosition = "center",
+  $textposition = "center",
   ...props
 }: TextCardProps) => {
   return (
     <TextCardWrap
       theme={theme}
       size={size}
-      testPosition={testPosition}
+      $textposition={$textposition}
       {...props}
     ></TextCardWrap>
   )
@@ -73,7 +73,7 @@ const TextCardWrap = styled.div<TextCardProps>`
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: ${({ testPosition }) => testPosition};
+  align-items: ${({ $textposition }) => $textposition};
   justify-content: center;
   font-weight: 600;
   ${({ theme }) => ThemeCss[theme as ThemeCssType]}
