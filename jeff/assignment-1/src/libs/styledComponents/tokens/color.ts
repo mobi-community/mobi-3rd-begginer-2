@@ -12,7 +12,7 @@ export const COLOR = {
 		},
 	},
 	system: {
-		confirm: '#91E544',
+		confirm: '#81C544',
 		alert: '#E6A345',
 		warning: '#E65549',
 	},

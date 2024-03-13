@@ -24,7 +24,7 @@ export const A1Modal = ({
 					$system={system}
 					{...{ onClick }}
 				>
-					ㅋㅋㅋ
+					확인
 				</S.Button>
 			</S.ButtonWrapper>
 		</S.ModalContainer>

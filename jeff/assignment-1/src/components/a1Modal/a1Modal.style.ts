@@ -6,21 +6,23 @@ export const SizeCSS = {
 	small: css`
 		width: 45rem;
 		height: 25rem;
+		grid-template-rows: 4fr 1fr;
 	`,
 	middle: css`
 		width: 50rem;
 		height: 30rem;
+		grid-template-rows: 5fr 1fr;
 	`,
 	big: css`
 		width: 55rem;
 		height: 40rem;
+		grid-template-rows: 6fr 1fr;
 	`,
 }
 export const ModalContainer = styled.div<$ModalContainerProps>`
 	${({ $size }) => SizeCSS[$size]}
 	display: grid;
 	justify-content: stretch;
-	grid-template-rows: 4fr 1fr;
 	border-radius: ${BORDER_RADIUS.small};
 	color: ${COLOR.grayScale.light};
 	border: 1px solid ${COLOR.grayScale.gray};

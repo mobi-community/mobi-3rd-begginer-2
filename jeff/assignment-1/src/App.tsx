@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { FaSearch } from 'react-icons/fa'
 import reactLogo from './assets/react.svg'
-import { A1Modal } from './components'
+import { A1Input, A1Modal } from './components'
 import viteLogo from '/vite.svg'
 
 function App() {
@@ -9,6 +10,10 @@ function App() {
 	return (
 		<>
 			<div>
+				<A1Input
+					icon={FaSearch}
+					size='full'
+				/>
 				<a
 					href='https://vitejs.dev'
 					target='_blank'
@@ -32,7 +37,7 @@ function App() {
 				<A1Modal
 					size='small'
 					system='alert'
-					onClick={()=>{}}
+					onClick={() => {}}
 				/>
 			</div>
 			<h1>Vite + React</h1>
