@@ -1,3 +1,6 @@
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
+import { GlobalStyles } from "../src/styles/globalStyles";
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -9,6 +12,12 @@ const preview = {
       },
     },
   },
+
+  decorators: [
+    withThemeFromJSXProvider({
+      GlobalStyles,
+    }),
+  ],
 };
 
 export default preview;
