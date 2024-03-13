@@ -1,14 +1,18 @@
 import Button from "../components/button";
-import { COLOR } from "../designToken/color";
+import { COLORS } from "../designToken/color";
+
+
 
 const Main = () => {
+    console.log(COLORS.PALLETE.teal.base);
     return (
         <>
-        <Button color={`${COLOR.PALLETE.teal.base}`}
+        <Button 
+        color={COLORS.PALLETE.teal.base}
         width="100px"
         height="100px" 
         text="choihayoung"
-        bgColor={`${COLOR.PALLETE.green.base}`}
+        bgColor={COLORS.PALLETE.green.weight}
         />
         </>
     )

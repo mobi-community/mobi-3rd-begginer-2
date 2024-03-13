@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLOR } from "../designToken/color";
+import { COLORS } from "../designToken/color";
 
 const Button = ({ color, width, height, text, bgColor }) => {
     return (
@@ -13,11 +13,11 @@ export default Button;
 const StyledButton = styled.button`
     width: ${({ width }) => width};
     height: ${({ height }) => height};
-    color: ${({ color }) => COLOR.SYSTEM[color] || COLOR.SYSTEM.black};
-    background-color: ${({ bgColor }) => COLOR.PALLETE[bgColor] || 'transparent'};
+    color: ${({ color }) => color || COLORS.SYSTEM.black};
+    background-color: ${({ bgColor }) =>bgColor|| 'transparent'};
     border-radius: 10px;
     transition: background-color 0.3s ease;
     &:active {
-        background-color: ${({ color }) => COLOR.PALLETE[color] || COLOR.MAIN[600]};
+        background-color: ${({ color }) => COLORS.PALLETE[color] || COLORS.MAIN[600]};
     }
 `;

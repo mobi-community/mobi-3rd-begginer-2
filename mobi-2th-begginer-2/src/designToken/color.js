@@ -22,13 +22,13 @@ const PALLETE = {
         light: "#A0C1B8",
     },
     green: {
-        base: "#D7E4C0",
-        light: "#C6DCBA",
+        base: "#C6DCBA",
+        light: "#D7E4C0",
         weight: "#BBC3A4",
     },
     gray: {
-        base: "#E3E1D9",
-        light: "#C7C8CC",
+        base: "#C7C8CC",
+        light: "#E3E1D9",
         weight: "#B4B4B8",
     },
     peach: {
@@ -38,7 +38,7 @@ const PALLETE = {
     blue: "#7BD3EA",
     lemon: "#F6F7C4",
 };
-export const COLOR = {
+export const COLORS = {
     SYSTEM,
     MAIN,
     PALLETE,
