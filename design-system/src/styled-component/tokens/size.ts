@@ -13,4 +13,21 @@ export const SIZE = {
       height: "3rem",
     },
   },
+  box: {
+    small: {
+      width: "5rem",
+      height: "5rem",
+      padding: "10px 16px",
+    },
+    medium: {
+      width: "7rem",
+      height: "7rem",
+      padding: "12px 18px",
+    },
+    large: {
+      width: "9rem",
+      height: "9rem",
+      padding: "14px 20px",
+    },
+  },
 } as const;

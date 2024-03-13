@@ -1,7 +1,6 @@
-import React from "react";
-import "./button.css";
-import { SIZE } from "../styled-component/tokens/size";
+import "../css/button.css";
 import { COLOR } from "../styled-component/tokens/color";
+import { SIZE } from "../styled-component/tokens/size";
 
 interface ButtonProps {
   /**
@@ -29,8 +28,10 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
+
+// 버튼 컴포넌트
 export const Button = ({
-  primary = false,
+  primary = true,
   size = "medium",
   backgroundColor,
   label,
@@ -40,8 +41,16 @@ export const Button = ({
     ? "storybook-button--primary"
     : "storybook-button--secondary";
 
-  const { width, height } = SIZE.button[size];
-  const buttonStyle = primary ? { backgroundColor: COLOR.main.base } : {};
+  const buttonSize = SIZE.button[size];
+
+  // primary가 true인 경우 backgroundColor를 COLOR 토큰의 main.base 값으로 설정
+  const buttonBackground = primary
+    ? { backgroundColor: COLOR.main.light }
+    : { backgroundColor: COLOR.main.weight };
+
+  const fontColor = primary
+    ? { color: COLOR.main.weight }
+    : { color: COLOR.main.light };
 
   return (
     <button
@@ -49,7 +58,7 @@ export const Button = ({
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
       )}
-      style={{ backgroundColor, width, height, ...buttonStyle }}
+      style={{ ...buttonSize, ...buttonBackground, ...fontColor }}
       {...props}
     >
       {label}

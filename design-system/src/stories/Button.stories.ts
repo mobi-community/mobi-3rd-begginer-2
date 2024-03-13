@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "./Button";
-import { COLOR } from "../styled-component/tokens/color";
+import { Button } from "../components/Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+// 버튼 컴포넌트에 대한 메타 정보 정의 (title, component, layout, tags, argTypes)
 const meta = {
   title: "Example/Button",
   component: Button,
@@ -19,15 +19,18 @@ const meta = {
   },
 } satisfies Meta<typeof Button>;
 
+// meata 정보 내보내기
 export default meta;
+
+// 스토리 객체 정의 (버튼 컴포넌트의 스토리에 대한 정보를 담고 있다)
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+// 버튼 컴포넌트의 다양한 속성 설정 (스토리 정의)
 export const Primary: Story = {
   args: {
     primary: true,
     label: "Button",
-    backgroundColor: COLOR.palette.orange.light,
   },
 };
 
@@ -48,13 +51,5 @@ export const Small: Story = {
   args: {
     size: "small",
     label: "Button",
-  },
-};
-
-export const Warning: Story = {
-  args: {
-    primary: true,
-    label: "Delete now",
-    backgroundColor: "red",
   },
 };

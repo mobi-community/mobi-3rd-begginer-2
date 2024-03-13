@@ -1,26 +1,24 @@
 :root {
-  --main-light: ${COLOR.main.light};
-  --main-base: ${COLOR.main.base};
-  --main-weight: ${COLOR.main.weight};
-  /* 다른 COLOR 토큰도 동일한 방식으로 정의 */
+  --color-main-light: ${COLOR.main.light};
+  --color-main-base: ${COLOR.main.base};
+  --color-main-weight: ${COLOR.main.weight};
 }
-
 .storybook-button {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
-  border-radius: 3rem;
+  border-radius: 3em;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
 }
 .storybook-button--primary {
   color: white;
-  background-color: var(--main-base);
+  background-color: var(--color-main-light);
 }
 .storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
+  color: white;
+  background-color:  var(--color-main-weight);;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
 .storybook-button--small {

@@ -9,6 +9,14 @@ export const COLOR = {
     base: "#F5F08F",
     weight: "#F5F500",
   },
+  grayScale: {
+    gray1000: "#000000", // 가장 어두운 검정
+    gray800: "#333333", // 80% 흑색
+    gray600: "#666666", // 60% 흑색
+    gray400: "#999999", // 40% 흑색
+    gray200: "#CCCCCC", // 20% 흑색
+    gray0: "#FFFFFF", // 가장 밝은 흰색
+  },
   palette: {
     red: {
       light: "#FA9292",

@@ -1,1 +1,4 @@
-export const BORDER_RADIUS = {} as const;
+export const BORDER_RADIUS = {
+  round_square: "10%",
+  round: "50%",
+} as const;
