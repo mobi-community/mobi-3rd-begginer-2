@@ -5,6 +5,11 @@ import { colors } from "../constants/design-tokens/color";
 import Button from "../components/common/button";
 import CheckBox from "../components/common/check-box";
 import { useState } from "react";
+import MultiSelectChips from "../components/common/muti-select-chips";
+import TailwindButton from "../components/common/tailwindCss/tailwind-button";
+import TailwindInput from "../components/common/tailwindCss/tailwind-input";
+import { HeadlessCheckBox } from "../components/common/headless/headless-checkbox";
+import { HeadlessSelect } from "../components/common/headless/headless-select";
 
 const Main = () => {
     const [isChecked, setIsChecked] = useState({
@@ -20,6 +25,15 @@ const Main = () => {
         { value: "option1", label: "옵션 1" },
         { value: "option2", label: "옵션 2" },
         { value: "option3", label: "옵션 3" },
+    ];
+
+    const chipsTextArr = [
+        "silver",
+        "blue",
+        "fuchsia",
+        "purple",
+        "black",
+        "yellow",
     ];
 
     return (
@@ -56,6 +70,50 @@ const Main = () => {
                 checked={isChecked.라벨2}
                 onChange={handleCheckedChange("라벨2")}
             />
+
+            <MultiSelectChips chipsText={chipsTextArr} />
+
+            <TailwindButton
+                text="확인"
+                className="bg-green-500 hover:bg-green-700"
+                onClick={() => alert("확인 클릭")}
+            />
+            <TailwindButton
+                text="취소"
+                className="bg-neonBlue hover:bg-neonOrange"
+                onClick={() => alert("취소 클릭")}
+            />
+            <TailwindInput
+                type={"text"}
+                placeholder={"여기에 입력하세요"}
+                className="bg-neonBlue border rounded border-neonOrange focus:outline-none focus:border-neonBlue"
+            />
+            <HeadlessCheckBox deflaultChecked={true}>
+                {({ checked, toggle }) => (
+                    <label>
+                        <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={toggle}
+                        />
+                        {checked ? "Checked" : "Unchecked"}
+                    </label>
+                )}
+            </HeadlessCheckBox>
+            <HeadlessSelect defaultSelected={"1"} options={dropDownOption}>
+                {({ options, select }) => (
+                    <select>
+                        {options?.map((option, index) => (
+                            <option
+                                key={index}
+                                onClick={() => select(option.value)}
+                            >
+                                {option.label}
+                            </option>
+                        ))}
+                    </select>
+                )}
+            </HeadlessSelect>
         </Wrapper>
     );
 };
