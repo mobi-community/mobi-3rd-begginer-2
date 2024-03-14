@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { colors } from "../../constants/design-tokens/color";
+import Button from "./button";
 /**
  * @component
  * @returns {JSX.Element}
@@ -65,14 +67,14 @@ const SideMenu = () => {
                     {open === item.name && (
                         <Toggle>
                             {item.items?.map((data, index) => (
-                                <SelectToggle
+                                <Button
                                     key={index}
                                     onClick={() => onClickNavi(data.url)}
+                                    theme={"neonPinkDark"}
                                     disabled={active === data.url}
                                     $isActive={active === data.url}
-                                >
-                                    {data.title}
-                                </SelectToggle>
+                                    text={data.title}
+                                />
                             ))}
                         </Toggle>
                     )}
@@ -89,20 +91,20 @@ const Container = styled.div`
     position: fixed;
     top: 100px;
     right: 30px;
-    box-shadow: 1px 1px 1px 2px #171010;
+    box-shadow: 1px 1px 1px 2px ${colors.SUB.neonYellow};
     border-radius: 4px;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 20px;
     z-index: 999;
-    background-color: #423f3e;
+    background-color: ${colors.SUB.neonPurple};
 `;
 
 const Title = styled.div`
     cursor: pointer;
     padding-bottom: 5px;
-    color: #aaa;
+    color: ${colors.SUB.neonGreen};
 `;
 
 const Toggle = styled.div`
@@ -112,17 +114,4 @@ const Toggle = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-`;
-
-const SelectToggle = styled.button`
-    padding: 5px;
-    background-color: ${(props) => (props.$isActive ? "#171010" : "#423f3e")};
-    color: ${(props) => (props.$isActive ? "#888" : "#aaa")};
-    border: none;
-    border-radius: 4px;
-    cursor: ${(props) => (props.$isActive ? "default" : "pointer")};
-
-    &:disabled {
-        opacity: 0.5;
-    }
 `;

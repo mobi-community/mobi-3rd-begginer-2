@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import UserList from "./user-list";
+import Button from "../../components/commons/button";
 
 /**
  * @component
@@ -35,9 +36,10 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
                         paginate(index + startPage);
                     }}
                     $isActive={params === index + startPage}
-                >
-                    {index + startPage}
-                </Button>
+                    disabled={params === index + startPage}
+                    theme={"neonGreenDark"}
+                    text={index + startPage}
+                />
             </Li>
         ));
     };
@@ -81,17 +83,33 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
             <PageNumber>
                 <Ul>
                     <Li>
-                        <Button onClick={prevGroup}>&lt;&lt;</Button>
+                        <Button
+                            onClick={prevGroup}
+                            text={"<<"}
+                            theme={"neonGreenDark"}
+                        />
                     </Li>
                     <Li>
-                        <Button onClick={prevPage}>&lt;</Button>
+                        <Button
+                            onClick={prevPage}
+                            text={"<"}
+                            theme={"neonGreenDark"}
+                        />
                     </Li>
                     {pageNumbers()}
                     <Li>
-                        <Button onClick={nextPage}>&gt;</Button>
+                        <Button
+                            onClick={nextPage}
+                            text={">"}
+                            theme={"neonGreenDark"}
+                        />
                     </Li>
                     <Li>
-                        <Button onClick={nextGroup}>&gt;&gt;</Button>
+                        <Button
+                            onClick={nextGroup}
+                            text={">>"}
+                            theme={"neonGreenDark"}
+                        />
                     </Li>
                 </Ul>
             </PageNumber>
@@ -119,17 +137,17 @@ const Li = styled.li`
     padding: 0 4px;
 `;
 
-const Button = styled.button`
-    cursor: pointer;
-    background-color: ${(props) =>
-        props.$isActive ? "#747264" : "transparent"};
-    color: ${(props) => (props.$isActive ? "#eeedeb" : "#e0ccbe")};
-    border: ${(props) => (props.$isActive ? "1px solid #3c3633" : "#ddd")};
-    border-radius: 4px;
-    font-size: 20px;
+// const Button = styled.button`
+//     cursor: pointer;
+//     background-color: ${(props) =>
+//         props.$isActive ? "#747264" : "transparent"};
+//     color: ${(props) => (props.$isActive ? "#eeedeb" : "#e0ccbe")};
+//     border: ${(props) => (props.$isActive ? "1px solid #3c3633" : "#ddd")};
+//     border-radius: 4px;
+//     font-size: 20px;
 
-    &:hover {
-        background-color: ${(props) =>
-            props.$isActive ? "#362222" : "#423f3e"};
-    }
-`;
+//     &:hover {
+//         background-color: ${(props) =>
+//             props.$isActive ? "#362222" : "#423f3e"};
+//     }
+// `;

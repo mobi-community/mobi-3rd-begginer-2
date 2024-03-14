@@ -5,6 +5,7 @@ import { styled } from "styled-components";
 import Pagination from "../components/user-page/pagination";
 import { Select } from "../components/commons/select";
 import Button from "../components/commons/button";
+import { colors } from "../constants/design-tokens/color";
 /**
  * @component
  * @returns {JSX.Element}
@@ -14,6 +15,9 @@ import Button from "../components/commons/button";
 const UserListPage = () => {
     const [userData, setUserData] = useState([]);
     const [sortType, setSortType] = useState(false);
+    const [backgroundColor, setBackgroundColor] = useState(
+        colors.MAIN.darkBlue
+    );
 
     // 상태를 가지고있다.
     const [searchParams, setSearchParams] = useSearchParams();
@@ -93,8 +97,32 @@ const UserListPage = () => {
         setSearchParams(searchParams);
     };
 
+    useEffect(() => {
+        const colorArr = [
+            colors.SUB.neonGreen,
+            colors.MAIN.darkRed,
+            colors.SUB.neonOrange,
+            colors.MAIN.neonBlue,
+            colors.MAIN.darkPurple,
+            colors.SUB.neonPurple,
+            colors.MAIN.darkBlue,
+            colors.SUB.neonYellow,
+            colors.SUB.secondary,
+        ];
+        let colorIndex = 0;
+
+        const changeBackground = () => {
+            setBackgroundColor(colorArr[colorIndex % colorArr.length]);
+            colorIndex++;
+        };
+
+        const intervalId = setInterval(changeBackground, 10);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
-        <Wrapper>
+        <Wrapper style={{ backgroundColor: backgroundColor }}>
             <SelectPerPageBox>
                 <Select
                     value={searchParams.get("per_page")}
@@ -145,16 +173,4 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #3c3633;
-`;
-
-const SortButton = styled.button`
-    background-color: ${(props) => (props.$isActive ? "#747264" : "#3c3633")};
-    color: ${(props) => (props.$isActive ? "#eeedeb" : "#e0ccbe")};
-    border: none;
-    cursor: ${(props) => (props.$isActive ? "default" : "pointer")};
-    padding: 0 10px;
-    &:disabled {
-        opacity: 0.5;
-    }
 `;
