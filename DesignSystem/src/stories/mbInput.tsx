@@ -99,7 +99,7 @@ const ButtonBase = styled.button<ButtonCssType>`
     !hasIcon &&
     css`
       border-radius: 8px;
-      border: 1px solid ${COLOR.grayScale[700]};
+      border: 1px solid ${COLOR.grayScale[600]};
       &:hover {
         transform: scale(1.2);
         background-color: ${COLOR.theme.mainOppsite.light};
