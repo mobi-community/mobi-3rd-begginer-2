@@ -1,21 +1,13 @@
-import Button from "../components/button";
-import { COLORS } from "../designToken/color";
-
-
+import Button from "../components/common/button";
+import Select from "../components/common/select";
 
 const Main = () => {
-    console.log(COLORS.PALLETE.teal.base);
+    const options = ["최하영", "김진솔", "이영록", "박채윤"];
     return (
         <>
-        <Button 
-        color={COLORS.PALLETE.teal.base}
-        width="100px"
-        height="100px" 
-        text="choihayoung"
-        bgColor={COLORS.PALLETE.green.weight}
-        />
+            <Button color="mainPurple" size="large" text="하영천재" />
+            <Select color="mainPurple" option={options} />
         </>
-    )
- 
+    );
 };
 export default Main;
