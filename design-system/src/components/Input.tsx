@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import { COLOR } from "../styled-component/tokens/color";
 import { FONT_SIZE } from "../styled-component/tokens/fontSize";
+import { BORDER } from "../styled-component/tokens/boeder";
+import { BORDER_RADIUS } from "../styled-component/tokens/borderRadius";
 interface InputProps {
   width?: string;
+  height?: string;
   titleText?: string;
   buttonText?: string;
+  placeHolder?: string;
   handleButton?: () => void;
 }
 
@@ -12,6 +16,7 @@ export const Input = ({
   width = "30rem",
   titleText = " ",
   buttonText = "",
+  placeHolder = "테스트",
   handleButton = () => {},
   ...props
 }: InputProps) => {
@@ -19,6 +24,7 @@ export const Input = ({
     <InputWrapper $width={width}>
       {titleText && <Title>{titleText}</Title>}
       <BorderBox>
+        <StyledInput placeholder={placeHolder} {...props} />
         {buttonText.trim() && (
           <TextButton
             onClick={(e) => {
@@ -42,9 +48,7 @@ const InputWrapper = styled.div<{ $width: string }>`
   width: ${({ $width }) => $width};
 `;
 
-const Title = styled.h4`
-  grid-row: 1;
-`;
+const Title = styled.h4``;
 
 const BorderBox = styled.div`
   grid-row: 2;
@@ -54,22 +58,33 @@ const BorderBox = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: 1px solid ${COLOR.grayScale.gray_800};
-  border-radius: 0.5rem;
+  border: ${BORDER.gray.thick_black_border};
+  border-radius: ${BORDER_RADIUS.round_square};
   padding: 0.2rem 1rem;
+`;
+const StyledInput = styled.input`
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  font-size: ${FONT_SIZE.sm};
+  border-radius: ${BORDER_RADIUS.round_square};
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const TextButton = styled.button`
   width: 6rem;
-  padding: 1rem;
-  color: ${COLOR.grayScale.gray_600};
-  background-color: ${COLOR.grayScale.gray_800};
-  font-size: ${FONT_SIZE.ti};
-  border-radius: 0.5rem;
+  padding: 0.8rem;
+  color: ${COLOR.grayScale.gray_0};
+  background-color: ${COLOR.main.base};
+  font-size: ${FONT_SIZE.sm};
+  border-radius: ${BORDER_RADIUS.round_square};
   word-break: keep-all;
   &:hover {
-    color: ${COLOR.main.light};
-    background-color: ${COLOR.grayScale.gray_600};
+    color: ${COLOR.grayScale.gray_0};
+    background-color: ${COLOR.main.light};
     cursor: pointer;
   }
 `;

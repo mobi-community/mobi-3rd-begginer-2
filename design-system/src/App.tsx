@@ -18,6 +18,7 @@ function App() {
         width="30rem"
         titleText="되나?"
         buttonText="Submit"
+        placeHolder="테스트입니다"
         handleButton={() => {}}
       />
     </>
