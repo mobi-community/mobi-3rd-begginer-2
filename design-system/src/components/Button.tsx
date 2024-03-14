@@ -10,6 +10,7 @@ interface ButtonProps {
   primary?: boolean;
   label?: string;
   backgroundColor?: string;
+  color?: string;
   size?: "small" | "medium" | "large";
   onClick?: () => void;
 }
@@ -21,7 +22,7 @@ export const Button = styled.button<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${COLOR.grayScale.gray_0};
+  color: ${({ color }) => color || COLOR.grayScale.gray_0};
   background-color: ${({ backgroundColor }) =>
     backgroundColor || COLOR.main.weight};
 
@@ -51,6 +52,7 @@ ${({ size }) =>
 
 
    &:hover {
-    background-color: ${COLOR.sub.light};
+    color: ${COLOR.main.weight};
+    background-color: ${COLOR.main.light};
   }
 `;
