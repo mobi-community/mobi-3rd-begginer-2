@@ -12,6 +12,7 @@ Primary.args = {
     size: "medium",
     theme: "neonGreenDark",
     text: "확인",
+    clickText: "클릭됨!!!",
 };
 
 export const Large = Template.bind({});

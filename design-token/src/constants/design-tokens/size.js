@@ -35,23 +35,6 @@ const sizes = {
             padding: "16px 20px",
         },
     },
-    checkbox: {
-        small: {
-            width: "10px",
-            height: "10px",
-            borderRadius: "4px",
-        },
-        medium: {
-            width: "20px",
-            height: "20px",
-            borderRadius: "4px",
-        },
-        large: {
-            width: "30px",
-            height: "30px",
-            borderRadius: "4px",
-        },
-    },
 };
 
 export default sizes;

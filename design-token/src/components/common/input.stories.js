@@ -12,6 +12,7 @@ LightGray.args = {
     size: "small",
     theme: "neonLigthGrayDark",
     placeholder: "text",
+    type: "phone"
 }
 
 export const PinkDark = Template.bind({});
@@ -19,6 +20,7 @@ PinkDark.args = {
     size: 'large',
     theme: "neonPinkDark",
     placeholder: "test",
+    type: "password",
 }
 
 export const SInput = (args) => <Input {...args} />

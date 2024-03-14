@@ -22,10 +22,10 @@ const SizeCss = {
         font-size: ${fontSize.small};
     `,
     medium:css`
-    padding: ${sizes.input.medium.padding};
-    font-size: ${fontSize.medium};
-`,
-large:css`
+        padding: ${sizes.input.medium.padding};
+        font-size: ${fontSize.medium};
+    `,
+    large:css`
         padding: ${sizes.input.large.padding};
         font-size: ${fontSize.large};
     `

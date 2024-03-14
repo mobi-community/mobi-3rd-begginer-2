@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Title from "../components/main/title";
 import Select from "../components/common/select";
 import Input from "../components/common/input";
 import { colors } from "../constants/design-tokens/color";
@@ -8,19 +7,23 @@ import CheckBox from "../components/common/check-box";
 import { useState } from "react";
 
 const Main = () => {
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState({
+        라벨: false,
+        라벨2: false,
+    });
 
-    const handleCheckedChange = (e) => {
-        setIsChecked(e.target.checked);
+    const handleCheckedChange = (label) => (e) => {
+        setIsChecked({ ...isChecked, [label]: e.target.checked });
     };
+
     const dropDownOption = [
         { value: "option1", label: "옵션 1" },
         { value: "option2", label: "옵션 2" },
         { value: "option3", label: "옵션 3" },
     ];
+
     return (
         <Wrapper>
-            {/* <Title title={"title"} textColor={colors.text.neonOrange} /> */}
             <Select
                 option={dropDownOption}
                 size={"medium"}
@@ -33,26 +36,25 @@ const Main = () => {
             />
             <Button
                 text={"버튼입니다"}
+                clickText={"클릭함!!!!"}
                 theme={"neonGreenDark"}
                 size={"medium"}
             />
             <CheckBox
                 label={"라벨"}
-                labelColor={"neonGreen"}
-                size={"medium"}
-                color={"darkBlue"}
-                borderColor={"secondary"}
-                checked={isChecked}
-                onChange={handleCheckedChange}
+                labelColor={"secondary"}
+                size={"small"}
+                theme={"darkBlueNeonYellow"}
+                checked={isChecked.라벨}
+                onChange={handleCheckedChange("라벨")}
             />
             <CheckBox
                 label={"라벨2"}
-                labelColor={"neonGreen"}
-                size={"medium"}
-                color={"darkBlue"}
-                borderColor={"secondary"}
-                checked={isChecked}
-                onChange={handleCheckedChange}
+                labelColor={"default"}
+                size={"large"}
+                theme={"darkRedNeonGreen"}
+                checked={isChecked.라벨2}
+                onChange={handleCheckedChange("라벨2")}
             />
         </Wrapper>
     );

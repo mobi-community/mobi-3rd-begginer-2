@@ -1,9 +1,9 @@
 import { SInput } from "../style/input.style";
 
-const Input = ({ placeholder, theme, size }) => {
+const Input = ({ type, placeholder, theme, size }) => {
     return (
         <SInput
-            type="text"
+            type={type}
             placeholder={placeholder}
             theme={theme}
             size={size}
