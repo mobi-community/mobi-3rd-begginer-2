@@ -30,4 +30,18 @@ export const SIZE = {
       padding: "14px 20px",
     },
   },
+  input: {
+    small: {
+      width: "15rem",
+      padding: "10px 5px",
+    },
+    medium: {
+      width: "30rem",
+      padding: "10px 5px",
+    },
+    large: {
+      width: "50rem",
+      padding: "10px 5px",
+    },
+  },
 } as const;

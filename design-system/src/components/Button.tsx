@@ -1,67 +1,56 @@
-import "../css/button.css";
+import styled, { css } from "styled-components";
 import { COLOR } from "../styled-component/tokens/color";
 import { SIZE } from "../styled-component/tokens/size";
+import { BORDER } from "../styled-component/tokens/boeder";
+import { BORDER_RADIUS } from "../styled-component/tokens/borderRadius";
+
+import { FONT_SIZE } from "../styled-component/tokens/fontSize";
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
   primary?: boolean;
-  /**
-   * What background color to use
-   */
+  label?: string;
   backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
   size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
+export const Button = styled.button<ButtonProps>`
+  margin: 10px;
+  border: ${BORDER.gray.thick_black_border};
+  border-radius: ${BORDER_RADIUS.round_square};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${COLOR.grayScale.gray_0};
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor || COLOR.main.weight};
 
-// 버튼 컴포넌트
-export const Button = ({
-  primary = true,
-  size = "medium",
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+  ${({ size }) =>
+    size === "small" &&
+    css`
+      font-size: ${FONT_SIZE.sm};
+      width: ${SIZE.button.small.width};
+      height: ${SIZE.button.small.height};
+    `}
 
-  const buttonSize = SIZE.button[size];
+  ${({ size }) =>
+    size === "medium" &&
+    css`
+      font-size: ${FONT_SIZE.md};
+      width: ${SIZE.button.medium.width};
+      height: ${SIZE.button.medium.height};
+    `}
 
-  // primary가 true인 경우 backgroundColor를 COLOR 토큰의 main.base 값으로 설정
-  const buttonBackground = primary
-    ? { backgroundColor: COLOR.main.light }
-    : { backgroundColor: COLOR.main.weight };
+${({ size }) =>
+    size === "large" &&
+    css`
+      font-size: ${FONT_SIZE.lg};
+      width: ${SIZE.button.large.width};
+      height: ${SIZE.button.large.height};
+    `}
 
-  const fontColor = primary
-    ? { color: COLOR.main.weight }
-    : { color: COLOR.main.light };
 
-  return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={{ ...buttonSize, ...buttonBackground, ...fontColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};
+   &:hover {
+    background-color: ${COLOR.sub.light};
+  }
+`;
