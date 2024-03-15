@@ -72,7 +72,12 @@ const Histogram = ({
         }
     }, [dataType, showHistogramLabels, histogramAccentColor, label]);
 
-    return <svg ref={d3Container} />;
+    return (
+        <>
+            <div className="bg-warning"></div>
+            <svg ref={d3Container} />
+        </>
+    );
 };
 
 export default Histogram;
