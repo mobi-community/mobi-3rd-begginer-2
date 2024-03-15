@@ -1,3 +1,3 @@
 import MBButton from "./mbButton"
-
-export { MBButton }
+import MBInput from "./MBInput"
+export { MBButton, MBInput }
