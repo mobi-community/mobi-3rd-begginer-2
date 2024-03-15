@@ -46,116 +46,130 @@ const Main = () => {
 
     return (
         <Wrapper>
-            <StyledButton
-                text={"open modal"}
-                theme={"neonOrangeYellow"}
-                size={"medium"}
-                onClick={openModal}
-            />
-            <HeadlessModal isOpen={isOpen} closeModal={closeModal}>
-                <h2>title</h2>
-                <p>open modal</p>
-            </HeadlessModal>
+            <CustomBox>
+                <p>디자인 토큰과 테마를 사용한 공용 컴포넌트</p>
+                <Select
+                    option={dropDownOption}
+                    size={"medium"}
+                    theme={"neonGreenDarkRed"}
+                />
+                <Input
+                    placeholder={"플레이스 홀더"}
+                    size={"small"}
+                    theme={"neonPinkDark"}
+                />
+                <StyledButton
+                    text={"버튼입니다"}
+                    clickText={"클릭함!!!!"}
+                    theme={"neonGreenDark"}
+                    size={"medium"}
+                />
+                <CheckBox
+                    label={"라벨"}
+                    labelColor={"secondary"}
+                    size={"small"}
+                    theme={"darkBlueNeonYellow"}
+                    checked={isChecked.라벨}
+                    onChange={handleCheckedChange("라벨")}
+                />
+                <CheckBox
+                    label={"라벨2"}
+                    labelColor={"default"}
+                    size={"large"}
+                    theme={"darkRedNeonGreen"}
+                    checked={isChecked.라벨2}
+                    onChange={handleCheckedChange("라벨2")}
+                />
 
-            <Select
-                option={dropDownOption}
-                size={"medium"}
-                theme={"neonGreenDarkRed"}
-            />
-            <Input
-                placeholder={"플레이스 홀더"}
-                size={"small"}
-                theme={"neonPinkDark"}
-            />
-            <StyledButton
-                text={"버튼입니다"}
-                clickText={"클릭함!!!!"}
-                theme={"neonGreenDark"}
-                size={"medium"}
-            />
-            <CheckBox
-                label={"라벨"}
-                labelColor={"secondary"}
-                size={"small"}
-                theme={"darkBlueNeonYellow"}
-                checked={isChecked.라벨}
-                onChange={handleCheckedChange("라벨")}
-            />
-            <CheckBox
-                label={"라벨2"}
-                labelColor={"default"}
-                size={"large"}
-                theme={"darkRedNeonGreen"}
-                checked={isChecked.라벨2}
-                onChange={handleCheckedChange("라벨2")}
-            />
+                <MultiSelectChips chipsText={chipsTextArr} />
+            </CustomBox>
+            <CustomBox>
+                <p>tailwindCss를 사용한 공용 컴포넌트</p>
+                <TailwindButton
+                    variant="register"
+                    shape="primary"
+                    size="md"
+                    weight="semibold"
+                    onClick={() => alert("확인 클릭")}
+                >
+                    확인
+                </TailwindButton>
+                <TailwindButton
+                    variant="cancel"
+                    shape="square"
+                    size="sm"
+                    weight="bold"
+                    onClick={() => alert("취소 클릭")}
+                >
+                    취소
+                </TailwindButton>
+                <TailwindInput
+                    variant={"error"}
+                    size={"lg"}
+                    placeholder="오류"
+                />
+            </CustomBox>
 
-            <MultiSelectChips chipsText={chipsTextArr} />
-
-            <TailwindButton
-                variant="register"
-                shape="primary"
-                size="md"
-                weight="semibold"
-                onClick={() => alert("확인 클릭")}
-            >
-                확인
-            </TailwindButton>
-
-            <TailwindButton
-                variant="cancel"
-                shape="square"
-                size="sm"
-                weight="bold"
-                onClick={() => alert("취소 클릭")}
-            >
-                취소
-            </TailwindButton>
-            <TailwindInput variant={"error"} size={"lg"} placeholder="오류" />
-            <HeadlessCheckBox deflaultChecked={true}>
-                {({ checked, toggle }) => (
-                    <label>
-                        <input
-                            type="checkbox"
-                            checked={checked}
-                            onChange={toggle}
-                        />
-                        {checked ? "Checked" : "Unchecked"}
-                    </label>
-                )}
-            </HeadlessCheckBox>
-            <HeadlessSelect defaultSelected={"1"} options={dropDownOption}>
-                {({ options, select }) => (
-                    <select>
-                        {options?.map((option, index) => (
-                            <option
-                                key={index}
-                                onClick={() => select(option.value)}
-                            >
-                                {option.label}
-                            </option>
-                        ))}
-                    </select>
-                )}
-            </HeadlessSelect>
-            <Button
-                variant="contained"
-                color="success"
-                sx={{ backgroundColor: "violet" }}
-            >
-                MUI
-            </Button>
-            <Button
-                variant="outlined"
-                color="error"
-                size="large"
-                sx={{ backgroundColor: "red" }}
-            >
-                MUI
-            </Button>
-            <MUISelect />
-            <MUIButton />
-            <MUITextField />
+            <CustomBox>
+                <p>headless component를 사용한 컴포넌트</p>
+                <StyledButton
+                    text={"open modal"}
+                    theme={"neonOrangeYellow"}
+                    size={"small"}
+                    onClick={openModal}
+                />
+                <HeadlessModal isOpen={isOpen} closeModal={closeModal}>
+                    <h2>title</h2>
+                    <p>open modal</p>
+                </HeadlessModal>
+                <HeadlessCheckBox deflaultChecked={true}>
+                    {({ checked, toggle }) => (
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={checked}
+                                onChange={toggle}
+                            />
+                            {checked ? "Checked" : "Unchecked"}
+                        </label>
+                    )}
+                </HeadlessCheckBox>
+                <HeadlessSelect defaultSelected={"1"} options={dropDownOption}>
+                    {({ options, select }) => (
+                        <select>
+                            {options?.map((option, index) => (
+                                <option
+                                    key={index}
+                                    onClick={() => select(option.value)}
+                                >
+                                    {option.label}
+                                </option>
+                            ))}
+                        </select>
+                    )}
+                </HeadlessSelect>
+            </CustomBox>
+            <CustomBox>
+                <p>NUI를 사용한 컴포넌트</p>
+                <Button
+                    variant="contained"
+                    color="success"
+                    sx={{ backgroundColor: "violet" }}
+                >
+                    MUI
+                </Button>
+                <Button
+                    variant="outlined"
+                    color="error"
+                    size="large"
+                    sx={{ backgroundColor: "red" }}
+                >
+                    MUI
+                </Button>
+                <MUISelect />
+                <MUIButton />
+                <MUITextField />
+            </CustomBox>
         </Wrapper>
     );
 };
@@ -165,4 +179,14 @@ const Wrapper = styled.div`
     width: 100px;
     height: 100px;
     background-color: ${colors.background.default};
+`;
+
+const CustomBox = styled.div`
+    width: 500px;
+    border: 1px solid ${colors.border.neonOrange};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
 `;

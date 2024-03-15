@@ -1,6 +1,4 @@
 import { cva } from "class-variance-authority";
-import sizes from "../../../constants/design-tokens/size";
-import { colors } from "../../../constants/design-tokens/color";
 
 export const inputVariants = cva(``, {
     variants: {
