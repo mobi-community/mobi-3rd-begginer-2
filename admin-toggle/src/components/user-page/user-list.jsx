@@ -71,20 +71,26 @@ const UserList = ({ userPerPage, userData, curPage }) => {
 
     return (
         <Container>
-            {currentUser.map((user, index) => (
-                <UserBox
-                    key={index}
-                    bgColor={bgColor}
-                    textColor={textColor}
-                    borderColor={borderColor}
-                >
-                    <p>{user.user_id}</p>
-                    <p>{user.name}</p>
-                    <p>{user.birthday}</p>
-                    <p>{HideNumber(user.phone_number)}</p>
-                    <p>{user.last_login}</p>
-                </UserBox>
-            ))}
+            {currentUser.map((user, index) => {
+                const hiddenPhoneNum = user.phone_number
+                    ? HideNumber(user.phone_number)
+                    : "No Phone Number";
+
+                return (
+                    <UserBox
+                        key={index}
+                        bgColor={bgColor}
+                        textColor={textColor}
+                        borderColor={borderColor}
+                    >
+                        <p>{user.user_id}</p>
+                        <p>{user.name}</p>
+                        <p>{user.birthday}</p>
+                        <p>{hiddenPhoneNum}</p>
+                        <p>{user.last_login}</p>
+                    </UserBox>
+                );
+            })}
         </Container>
     );
 };

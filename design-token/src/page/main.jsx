@@ -2,14 +2,20 @@ import styled from "styled-components";
 import Select from "../components/common/select";
 import Input from "../components/common/input";
 import { colors } from "../constants/design-tokens/color";
-import Button from "../components/common/button";
+import StyledButton from "../components/common/button";
 import CheckBox from "../components/common/check-box";
 import { useState } from "react";
 import MultiSelectChips from "../components/common/muti-select-chips";
-import TailwindButton from "../components/common/tailwindCss/tailwind-button";
 import TailwindInput from "../components/common/tailwindCss/tailwind-input";
 import { HeadlessCheckBox } from "../components/common/headless/headless-checkbox";
 import { HeadlessSelect } from "../components/common/headless/headless-select";
+import { TailwindButton } from "../components/common/tailwindCss/tailwind-button";
+import Button from "@mui/material/Button";
+import MUISelect from "../components/common/MUI/MUI-select";
+import MUIButton from "../components/common/MUI/MUI-button";
+import MUITextField from "../components/common/MUI/MUI-TextField";
+import useModal from "../components/hook/custom-modal";
+import HeadlessModal from "../components/common/headless/headless-modal";
 
 const Main = () => {
     const [isChecked, setIsChecked] = useState({
@@ -36,8 +42,21 @@ const Main = () => {
         "yellow",
     ];
 
+    const { isOpen, openModal, closeModal } = useModal();
+
     return (
         <Wrapper>
+            <StyledButton
+                text={"open modal"}
+                theme={"neonOrangeYellow"}
+                size={"medium"}
+                onClick={openModal}
+            />
+            <HeadlessModal isOpen={isOpen} closeModal={closeModal}>
+                <h2>title</h2>
+                <p>open modal</p>
+            </HeadlessModal>
+
             <Select
                 option={dropDownOption}
                 size={"medium"}
@@ -48,7 +67,7 @@ const Main = () => {
                 size={"small"}
                 theme={"neonPinkDark"}
             />
-            <Button
+            <StyledButton
                 text={"버튼입니다"}
                 clickText={"클릭함!!!!"}
                 theme={"neonGreenDark"}
@@ -74,20 +93,25 @@ const Main = () => {
             <MultiSelectChips chipsText={chipsTextArr} />
 
             <TailwindButton
-                text="확인"
-                className="bg-green-500 hover:bg-green-700"
+                variant="register"
+                shape="primary"
+                size="md"
+                weight="semibold"
                 onClick={() => alert("확인 클릭")}
-            />
+            >
+                확인
+            </TailwindButton>
+
             <TailwindButton
-                text="취소"
-                className="bg-neonBlue hover:bg-neonOrange"
+                variant="cancel"
+                shape="square"
+                size="sm"
+                weight="bold"
                 onClick={() => alert("취소 클릭")}
-            />
-            <TailwindInput
-                type={"text"}
-                placeholder={"여기에 입력하세요"}
-                className="bg-neonBlue border rounded border-neonOrange focus:outline-none focus:border-neonBlue"
-            />
+            >
+                취소
+            </TailwindButton>
+            <TailwindInput variant={"error"} size={"lg"} placeholder="오류" />
             <HeadlessCheckBox deflaultChecked={true}>
                 {({ checked, toggle }) => (
                     <label>
@@ -114,6 +138,24 @@ const Main = () => {
                     </select>
                 )}
             </HeadlessSelect>
+            <Button
+                variant="contained"
+                color="success"
+                sx={{ backgroundColor: "violet" }}
+            >
+                MUI
+            </Button>
+            <Button
+                variant="outlined"
+                color="error"
+                size="large"
+                sx={{ backgroundColor: "red" }}
+            >
+                MUI
+            </Button>
+            <MUISelect />
+            <MUIButton />
+            <MUITextField />
         </Wrapper>
     );
 };

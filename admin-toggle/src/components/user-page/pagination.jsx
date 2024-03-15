@@ -136,18 +136,3 @@ const Ul = styled.ul`
 const Li = styled.li`
     padding: 0 4px;
 `;
-
-// const Button = styled.button`
-//     cursor: pointer;
-//     background-color: ${(props) =>
-//         props.$isActive ? "#747264" : "transparent"};
-//     color: ${(props) => (props.$isActive ? "#eeedeb" : "#e0ccbe")};
-//     border: ${(props) => (props.$isActive ? "1px solid #3c3633" : "#ddd")};
-//     border-radius: 4px;
-//     font-size: 20px;
-
-//     &:hover {
-//         background-color: ${(props) =>
-//             props.$isActive ? "#362222" : "#423f3e"};
-//     }
-// `;

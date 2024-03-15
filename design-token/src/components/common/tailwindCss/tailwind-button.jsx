@@ -1,11 +1,20 @@
-const TailwindButton = ({ text, className, onClick }) => {
+import { cn } from "../../libs/utils/cn";
+import { ButtonVariants } from "./cva-button-style";
+
+export const TailwindButton = ({
+    variant,
+    shape,
+    size,
+    weight,
+    children,
+    ...props
+}) => {
     return (
         <button
-            className={`text-xl font-bold py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 ${className}`}
-            onClick={onClick}
+            className={cn(ButtonVariants({ variant, shape, size, weight }))}
+            {...props}
         >
-            {text}
+            {children}
         </button>
     );
 };
-export default TailwindButton;
