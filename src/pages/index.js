@@ -34,6 +34,8 @@ const MainPage = () => {
         icon={faCircleXmark}
         color={COROLS.errors}
       />
+
+      <hr />
     </>
   );
 };
