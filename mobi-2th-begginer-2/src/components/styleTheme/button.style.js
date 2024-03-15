@@ -32,7 +32,7 @@ const ButtonColorCss = {
     },
     peach: {
         css: css`
-            background-color: ${COLORS.PALLETE.peach};
+            background-color: ${COLORS.PALLETE.peach.weight};
             color: ${COLORS.SYSTEM.black};
         `,
     },
@@ -45,6 +45,12 @@ const ButtonColorCss = {
 };
 
 const ButtonSizeCss = {
+    mini: {
+        css: css`
+            width: ${SIZES.BUTTON.mini.width};
+            height: ${SIZES.BUTTON.mini.height};
+        `,
+    },
     small: {
         css: css`
             width: ${SIZES.BUTTON.small.width};

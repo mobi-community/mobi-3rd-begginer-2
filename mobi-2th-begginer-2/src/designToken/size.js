@@ -1,4 +1,8 @@
 const BUTTON = {
+    mini: {
+        width: "35px",
+        height: "40px",
+    },
     small: {
         width: "50px",
         height: "50px",
@@ -14,9 +18,13 @@ const BUTTON = {
 };
 
 const SELECT = {
+    mini: {
+        width: "50px",
+        height: "30px",
+    },
     small: {
         width: "100px",
-        height: "50px",
+        height: "30px",
     },
     medium: {
         width: "150px",

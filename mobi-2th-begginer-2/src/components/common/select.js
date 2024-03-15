@@ -1,10 +1,12 @@
 import { StyleSelect } from "../styleTheme/selectBox.style";
 
-const Select = ({ color, option }) => {
+const Select = ({ color, option, value, onChange }) => {
     return (
-        <StyleSelect color={color}>
-            {option?.map((option, index) => (
-                <option key={index}>{option}</option>
+        <StyleSelect color={color} value={value} onChange={onChange}>
+            {option?.map((option) => (
+                <option key={option.id} value={option.value}>
+                    {option.label}
+                </option>
             ))}
         </StyleSelect>
     );

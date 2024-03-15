@@ -34,6 +34,7 @@ const PALLETE = {
     peach: {
         base: "#EFB495",
         light: "#EFD595",
+        weight: "#ffc0cb",
     },
     blue: "#7BD3EA",
     lemon: "#F6F7C4",
