@@ -2,7 +2,14 @@ import { useState } from "react";
 import { StyledButton } from "../style/button.style";
 
 // Button 컴포넌트
-const Button = ({ colorMode, colorType, borderRadiusStyle, shape, size }) => {
+const Button = ({
+    colorMode,
+    colorType,
+    borderRadiusStyle,
+    shape,
+    size,
+    sizeShape,
+}) => {
     const [isActive, setIsActive] = useState(false);
     const [isSelected, setIsSelected] = useState(false);
 

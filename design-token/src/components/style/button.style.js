@@ -10,12 +10,12 @@ const ColorCss = {
             selectBorder: `${border.size.sm} solid ${colors.rainbow.red.base}`,
         },
         base: {
-            background: colors.rainbow.red.light,
+            background: colors.rainbow.red.base,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.red.weight}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.red.weight}`,
         },
         weight: {
-            background: colors.rainbow.red.light,
+            background: colors.rainbow.red.weight,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.red.light}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.red.light}`,
         },
@@ -27,12 +27,12 @@ const ColorCss = {
             selectBorder: `${border.size.sm} solid ${colors.rainbow.orange.base}`,
         },
         base: {
-            background: colors.rainbow.orange.light,
+            background: colors.rainbow.orange.base,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.orange.weight}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.orange.weight}`,
         },
         weight: {
-            background: colors.rainbow.orange.light,
+            background: colors.rainbow.orange.weight,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.orange.light}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.orange.light}`,
         },
@@ -44,12 +44,12 @@ const ColorCss = {
             selectBorder: `${border.size.sm} solid ${colors.rainbow.yellow.base}`,
         },
         base: {
-            background: colors.rainbow.yellow.light,
+            background: colors.rainbow.yellow.base,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.yellow.weight}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.yellow.weight}`,
         },
         weight: {
-            background: colors.rainbow.yellow.light,
+            background: colors.rainbow.yellow.weight,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.yellow.light}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.yellow.light}`,
         },
@@ -61,12 +61,12 @@ const ColorCss = {
             selectBorder: `${border.size.sm} solid ${colors.rainbow.green.base}`,
         },
         base: {
-            background: colors.rainbow.green.light,
+            background: colors.rainbow.green.base,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.green.weight}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.green.weight}`,
         },
         weight: {
-            background: colors.rainbow.green.light,
+            background: colors.rainbow.green.weight,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.green.light}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.green.light}`,
         },
@@ -78,12 +78,12 @@ const ColorCss = {
             selectBorder: `${border.size.sm} solid ${colors.rainbow.sky_blue.base}`,
         },
         base: {
-            background: colors.rainbow.sky_blue.light,
+            background: colors.rainbow.sky_blue.base,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.sky_blue.weight}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.sky_blue.weight}`,
         },
         weight: {
-            background: colors.rainbow.sky_blue.light,
+            background: colors.rainbow.sky_blue.weight,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.sky_blue.light}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.sky_blue.light}`,
         },
@@ -95,12 +95,12 @@ const ColorCss = {
             selectBorder: `${border.size.sm} solid ${colors.rainbow.blue.base}`,
         },
         base: {
-            background: colors.rainbow.blue.light,
+            background: colors.rainbow.blue.base,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.blue.weight}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.blue.weight}`,
         },
         weight: {
-            background: colors.rainbow.blue.light,
+            background: colors.rainbow.blue.weight,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.blue.light}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.blue.light}`,
         },
@@ -112,12 +112,12 @@ const ColorCss = {
             selectBorder: `${border.size.sm} solid ${colors.rainbow.purple.base}`,
         },
         base: {
-            background: colors.rainbow.purple.light,
+            background: colors.rainbow.purple.base,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.purple.weight}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.purple.weight}`,
         },
         weight: {
-            background: colors.rainbow.purple.light,
+            background: colors.rainbow.purple.weight,
             ActiveBorder: `${border.size.md} solid ${colors.rainbow.purple.light}`,
             selectBorder: `${border.size.sm} solid ${colors.rainbow.purple.light}`,
         },
@@ -173,19 +173,19 @@ const SizeCss = {
         `,
     },
     square: {
-        small: css`
+        tiny: css`
             width: ${sizes.button.width.small};
             height: ${sizes.button.height.small};
         `,
-        medium: css`
+        small: css`
             width: ${sizes.button.width.medium};
             height: ${sizes.button.height.medium};
         `,
-        big: css`
+        medium: css`
             width: ${sizes.button.width.big};
             height: ${sizes.button.height.big};
         `,
-        very_big: css`
+        big: css`
             width: ${sizes.button.width.very_big};
             height: ${sizes.button.height.very_big};
         `,

@@ -3,17 +3,17 @@ import Button from "./../components/common/button";
 
 const Main = () => {
     const colorModeRef = useRef("redBtn");
-    const colorTypeRef = useRef("base");
+    const colorTypeRef = useRef("light");
     const borderRadiusStyleRef = useRef("square");
-    const shapeRef = useRef("thick");
-    const sizeRef = useRef("medium");
+    const shapeRef = useRef("thin");
+    const sizeRef = useRef("tiny");
 
     const [buttonProps, setButtonProps] = useState({
         colorMode: "redBtn",
-        colorType: "base",
+        colorType: "light",
         borderRadiusStyle: "square",
-        shape: "thick",
-        size: "medium",
+        shape: "thin",
+        size: "tiny",
         state: "none",
     });
 
@@ -32,6 +32,11 @@ const Main = () => {
             <select onChange={(e) => (colorModeRef.current = e.target.value)}>
                 <option value="redBtn">Red</option>
                 <option value="orangeBtn">Orange</option>
+                <option value="yellowBtn">Yellow</option>
+                <option value="greenBtn">Green</option>
+                <option value="skyBlueBtn">SkyBlue</option>
+                <option value="blueBtn">Blue</option>
+                <option value="purpleBtn">Purple</option>
             </select>
 
             <select onChange={(e) => (colorTypeRef.current = e.target.value)}>
@@ -51,14 +56,16 @@ const Main = () => {
             </select>
 
             <select onChange={(e) => (shapeRef.current = e.target.value)}>
-                <option value="thick">Thick</option>
                 <option value="thin">Thin</option>
+                <option value="square">square</option>
+                <option value="thick">Thick</option>
             </select>
 
             <select onChange={(e) => (sizeRef.current = e.target.value)}>
+                <option value="tiny">Tiny</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
-                <option value="large">Large</option>
+                <option value="big">Big</option>
             </select>
             <button onClick={applyChanges}>Apply Changes</button>
 
