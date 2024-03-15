@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "./Button";
+import { TSButton } from "./Button";
 
 type User = {
   name: string;
@@ -74,21 +74,16 @@ export const Header = ({
           <WelcomeMessage>
             Welcome, <b>{user.name}</b>!
           </WelcomeMessage>
-          <Button size="small" onClick={onLogout}>
+          <TSButton size="small" onClick={onLogout}>
             Log out{" "}
-          </Button>
+          </TSButton>
         </>
       ) : (
         <>
-          <Button size="small" onClick={onLogin}>
+          <TSButton size="small" onClick={onLogin}>
             Log in{" "}
-          </Button>
-          <Button
-            primary
-            size="small"
-            onClick={onCreateAccount}
-            label="Sign up"
-          ></Button>
+          </TSButton>
+          <TSButton primary size="small" onClick={onCreateAccount}></TSButton>
         </>
       )}
     </div>
