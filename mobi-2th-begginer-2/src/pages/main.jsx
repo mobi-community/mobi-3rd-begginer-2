@@ -1,13 +1,21 @@
-import Button from "../components/common/button";
-import Select from "../components/common/select";
+import styled from "styled-components";
+import UserPage from "./userpage";
+import { COLORS } from "../designToken/color";
 
 const Main = () => {
-    const options = ["최하영", "김진솔", "이영록", "박채윤"];
     return (
-        <>
-            <Button color="mainPurple" size="large" text="하영천재" />
-            <Select color="mainPurple" option={options} />
-        </>
+        <MainWrapper>
+            <UserPage />
+            {/* <Button color="mainPurple" size="large" text="하영천재" />
+            <Select color="mainPurple" option={options} /> */}
+        </MainWrapper>
     );
 };
 export default Main;
+const MainWrapper = styled.div`
+    display: flex;
+    width: 100%;
+    background-color: ${COLORS.PALLETE.teal.light};
+    justify-content: center;
+    align-items: center;
+`;
