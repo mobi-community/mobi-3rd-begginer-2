@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+
+		@apply font-netflix-sans;
+		@apply text-base;
+		@apply font-medium;
+	}
+	html {
+		font-size: 62.5%;
+	}
+	h1 {
+		@apply text-4xl;
+	}
+	h2 {
+		@apply text-3xl;
+	}
+	h3 {
+		@apply text-2xl;
+	}
+	h4 {
+		@apply text-xl;
+	}
+	button {
+		border: none;
+	}
+	input {
+		outline: none;
+	}
+	ul,
+	li {
+		list-style: none;
+	}
+}
