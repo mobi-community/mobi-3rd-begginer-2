@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import UserList from "./user-list";
 import Button from "../../components/commons/button";
+import PageNumber from "./page-number";
 
 /**
  * @component
@@ -25,25 +26,9 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
         setCurPage(curPage);
     };
 
-    const pageNumbers = () => {
-        const startPage =
-            Math.floor((params - 1) / perPageGroup) * perPageGroup + 1;
-        const endPage = Math.min(startPage + perPageGroup - 1, pageCount);
-
-        return Array.from({ length: endPage - startPage + 1 }, (_, index) => (
-            <Li key={index}>
-                <Button
-                    onClick={() => {
-                        paginate(index + startPage);
-                    }}
-                    $isActive={params === index + startPage}
-                    disabled={params === index + startPage}
-                    theme={"neonGreenDark"}
-                    text={index + startPage}
-                />
-            </Li>
-        ));
-    };
+    const startPage =
+        Math.floor((params - 1) / perPageGroup) * perPageGroup + 1;
+    const endPage = Math.min(startPage + perPageGroup - 1, pageCount);
 
     const prevPage = () => {
         if (params > 1) {
@@ -81,7 +66,7 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
                 userPerPage={userPerPage}
                 curPage={curPage}
             />
-            <PageNumber>
+            <PageNumberWrapper>
                 <Ul>
                     <Li>
                         <Button
@@ -97,7 +82,12 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
                             theme={"neonGreenDark"}
                         />
                     </Li>
-                    {pageNumbers()}
+                    <PageNumber
+                        startPage={startPage}
+                        endPage={endPage}
+                        params={params}
+                        paginate={paginate}
+                    />
                     <Li>
                         <Button
                             onClick={nextPage}
@@ -113,7 +103,7 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
                         />
                     </Li>
                 </Ul>
-            </PageNumber>
+            </PageNumberWrapper>
         </Wrapper>
     );
 };
@@ -123,7 +113,7 @@ const Wrapper = styled.div`
     padding-top: 30px;
 `;
 
-const PageNumber = styled.div`
+const PageNumberWrapper = styled.div`
     display: flex;
     justify-content: center;
 `;
