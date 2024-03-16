@@ -5,8 +5,8 @@ export const border = {
         bg: "0.3rem",
     },
     radius: {
-        square: "0rem",
-        oval: "1.2rem",
-        circle: "3rem",
+        square: "0px",
+        oval: "5rem",
+        circle: "10000rem",
     },
 };

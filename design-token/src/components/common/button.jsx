@@ -1,46 +1,46 @@
-import { useState } from "react";
-import { StyledButton } from "../style/button.style";
-
 // Button 컴포넌트
-const Button = ({
-    colorMode,
-    colorType,
-    borderRadiusStyle,
-    shape,
-    size,
-    sizeShape,
-}) => {
-    const [isActive, setIsActive] = useState(false);
-    const [isSelected, setIsSelected] = useState(false);
-
-    const handleMouseDown = () => {
-        setIsActive(true);
-    };
-
-    const handleMouseUp = () => {
-        setIsActive(false);
-        setIsSelected(!isSelected);
-    };
-
-    const handleMouseLeave = () => {
-        setIsActive(false);
-    };
-
+import { css, styled } from "styled-components";
+import { colors } from "./../../libs/design-token/color";
+import { border } from "../../libs/design-token/design";
+const Button = ({ colorMode, borderRadiusStyle, shape, props }) => {
     return (
-        <StyledButton
+        <CustomBtn
             colorMode={colorMode}
-            colorType={colorType}
             borderRadiusStyle={borderRadiusStyle}
             shape={shape}
-            size={size}
-            isActive={isActive}
-            isSelected={isSelected}
-            onMouseDown={handleMouseDown}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-        >
-            1
-        </StyledButton>
+            {...props}
+        ></CustomBtn>
     );
 };
 export default Button;
+
+const ShapeCss = {
+    baseType: css`
+        width: 20rem;
+        height: 10rem;
+    `,
+    shaftType: css`
+        width: 10rem;
+        height: 30rem;
+        border: 5px solid black;
+    `,
+    circleType: css`
+        width: 20rem;
+        height: 20rem;
+        border: 5px solid black;
+    `,
+};
+
+const CustomBtn = styled.button`
+    width: fit-content;
+    height: fit-content;
+    min-height: 5rem;
+    min-width: 5rem;
+    background-color: ${({ colorMode }) => colors.rainbow[colorMode].base};
+    border-radius: ${({ borderRadiusStyle }) =>
+        border.radius[borderRadiusStyle]};
+    ${({ shape }) => ShapeCss[shape]}
+    &:hover {
+        background-color: red;
+    }
+`;
