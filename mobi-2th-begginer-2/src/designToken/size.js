@@ -36,7 +36,27 @@ const SELECT = {
     },
 };
 
+const CHECKBOX = {
+    mini: {
+        width: "10px",
+        height: "10px",
+    },
+    small: {
+        width: "15px",
+        height: "15px",
+    },
+    medium: {
+        width: "25px",
+        height: "25px",
+    },
+    large: {
+        width: "35px",
+        height: "35px",
+    },
+};
+
 export const SIZES = {
     BUTTON,
     SELECT,
+    CHECKBOX,
 };
