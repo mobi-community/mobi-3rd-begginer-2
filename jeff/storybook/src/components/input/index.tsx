@@ -10,7 +10,7 @@ export const InputVariants = cva('border-solid p-2 gap-2 flex justify-between it
 			secondary:
 				'text-Primary-White focus-within:text-Primary-Black border-Grey-Grey-500 focus-within:border-Primary-White bg-Grey-Grey-250 focus-within:bg-Grey-Grey-10',
 		},
-		size: {
+		scale: {
 			small: 'w-40 h-10 text-2xl border-2',
 			large: 'w-80 h-14 text-6xl border-4',
 			full: 'w-full h-24 text-6xl  border-4',
@@ -22,14 +22,14 @@ export const InputVariants = cva('border-solid p-2 gap-2 flex justify-between it
 	},
 	defaultVariants: {
 		theme: 'primary',
-		size: 'full',
+		scale: 'small',
 		radius: 'semi',
 	},
 })
 
-export const Input = ({ theme, size, radius, iconData, ...rest }: InputProps) => {
+export const Input = ({ theme, scale, radius, iconData, ...rest }: InputProps) => {
 	return (
-		<div className={InputVariants({ theme, size, radius })}>
+		<div className={InputVariants({ theme, scale, radius })}>
 			<input
 				className='w-full bg-transparent px-1'
 				{...rest}

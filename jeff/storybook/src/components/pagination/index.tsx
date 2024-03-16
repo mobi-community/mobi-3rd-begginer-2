@@ -22,8 +22,7 @@ export const PaginationVariants = cva(
 			},
 			weight: {
 				normal: 'font-small border-2',
-				medium: 'font-semibold border-4',
-				bold: 'font-bold border-8',
+				bold: 'font-semibold border-4',
 			},
 		},
 		defaultVariants: {
@@ -40,29 +39,29 @@ export const Pagination = ({
 	shape,
 	size,
 	weight,
-	curPage,
-	perPage,
-	totPage,
+	curPage = 1,
+	perPage = 5,
+	totPage = 1,
 	onHandlePage,
 }: PaginationProps) => {
 	const startPage = Math.floor((curPage - 1) / perPage) * perPage + 1 // 시작 번호
 
 	const onClickFirstButton = () => {
-		onHandlePage(1)
+		onHandlePage && onHandlePage(1)
 	}
 	const onClickPreviousButton = () => {
 		if (curPage === 1) return
-		onHandlePage(curPage - 1)
+		onHandlePage && onHandlePage(curPage - 1)
 	}
 	const onClickNextButton = () => {
 		if (curPage === totPage) return
-		onHandlePage(curPage + 1)
+		onHandlePage && onHandlePage(curPage + 1)
 	}
 	const onClickLastButton = () => {
-		onHandlePage(totPage)
+		onHandlePage && onHandlePage(totPage)
 	}
 	const onClickNumberButton = (moveTo: number) => {
-		onHandlePage(moveTo)
+		onHandlePage && onHandlePage(moveTo)
 	}
 
 	return (

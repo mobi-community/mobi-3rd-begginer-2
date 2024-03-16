@@ -11,9 +11,7 @@ export const Modal = ({
 	contentText,
 	buttonText = '닫기',
 	iconData = faWarning,
-	onClick = () => {
-		console.log('굿')
-	},
+	onClick = () => {},
 }: ModalProps) => {
 	return (
 		<div className='fixed top-0 left-0 bg-transparent z-10 w-full h-full flex justify-center items-center text-Primary-White'>

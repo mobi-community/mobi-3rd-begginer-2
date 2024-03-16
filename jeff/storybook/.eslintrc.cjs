@@ -3,14 +3,7 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-	extends: [
-		'eslint:recommended',
-		'plugin:jsx-ally/recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:react/recommended',
-		'plugin:prettier/recommended',
-		'plugin:react-hooks/recommended',
-	],
+	extends: ['eslint:recommended', 'plugin:jsx-ally/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:prettier/recommended', 'plugin:react-hooks/recommended', 'plugin:storybook/recommended'],
 	overrides: [
 		{
 			env: {
