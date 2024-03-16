@@ -48,19 +48,19 @@ const ButtonWrapper = styled.div`
     justify-content: center;
     align-items: center;
 `;
-const SButton = styled.button`
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 0;
-    background: #ffc0cb;
-    color: black;
-    font-size: 1rem;
+// const SButton = styled.button`
+//     border: none;
+//     border-radius: 8px;
+//     padding: 10px;
+//     margin: 0;
+//     background: #ffc0cb;
+//     color: black;
+//     font-size: 1rem;
 
-    &:hover {
-        background: tomato;
-        cursor: pointer;
-    }
-`;
+//     &:hover {
+//         background: tomato;
+//         cursor: pointer;
+//     }
+// `;
 
 export default Pagination;

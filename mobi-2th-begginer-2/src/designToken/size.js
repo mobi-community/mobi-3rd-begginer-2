@@ -4,7 +4,7 @@ const BUTTON = {
         height: "40px",
     },
     small: {
-        width: "50px",
+        width: "65px",
         height: "50px",
     },
     medium: {
@@ -12,8 +12,8 @@ const BUTTON = {
         height: "50px",
     },
     large: {
-        width: "350px",
-        height: "70px",
+        width: "200px",
+        height: "50px",
     },
 };
 

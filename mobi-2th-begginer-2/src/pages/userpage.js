@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { useLocation, useSearchParams } from "react-router-dom";
 import Select from "../components/common/select";
 import { COLORS } from "../designToken/color";
+import Container from "@mui/material/Container";
 
 const UserPage = () => {
     const [userData, setUserData] = useState([]);
@@ -81,7 +82,7 @@ const UserPage = () => {
         { id: 2, value: "birth", label: "생일순" },
     ];
     return (
-        <>
+        <Container maxWidth="sm">
             <SelectWrapper>
                 <Select
                     value={limit}
@@ -127,7 +128,7 @@ const UserPage = () => {
                     currentPage={currentPage}
                 />
             </MainWrapper>
-        </>
+        </Container>
     );
 };
 export default UserPage;

@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { COLORS } from "../../designToken/color";
 import { SIZES } from "../../designToken/size";
+import { Button } from "@mui/material";
 
 const ButtonColorCss = {
     mainPurple: {
@@ -82,3 +83,19 @@ export const StyleBtn = styled.button`
         transform: scale(0.8);
     }
 `;
+// export const MUIButton = styled(({ color, size, ...otherProps }) => (
+//     <Button {...otherProps} />
+// ))`
+//     && {
+//         border: none;
+//         border-radius: 10px;
+//         cursor: pointer;
+//         ${({ color }) => ButtonColorCss[color]}
+//         ${({ size }) => ButtonSizeCss[size]}
+//         &:active {
+//             background-color: ${({ color }) =>
+//                 color && ButtonColorCss[color].activeColor};
+//             transform: scale(0.8);
+//         }
+//     }
+// `;
