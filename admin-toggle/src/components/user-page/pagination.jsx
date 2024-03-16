@@ -6,7 +6,8 @@ import Button from "../../components/commons/button";
  * @component
  * @parameter userPerPage: number - 현재 페이지의 번호를 받아옵니다
  * @parameter userData: Array<Object> - 전체 유저의 데이터를 받아옵니다
- * @parameter sort: string - 현재 정렬의 값을 받아옵니다
+ * @parameter curPage: URLSearchParams - Main에 searchParams의 값입니다
+ * @parameter setCurPage: setURLSearchParams - Main의 setSearchParams 입니다
  * @returns {JSX.Element}
  *
  * @description pagination을 하게해주는 페이지입니다
