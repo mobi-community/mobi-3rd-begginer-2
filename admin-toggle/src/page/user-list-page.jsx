@@ -56,7 +56,7 @@ const UserListPage = () => {
         // perPage의 초기값 설정
         const perPage = Number(searchParams.get("per_page") || 20); // get으로 per_page키를 받아서 value 받아오기
 
-        if (perPage !== Number(searchParams.get("per_page"))) {
+        if (perPage !== searchParams.get("per_page")) {
             searchParams.set("per_page", perPage); //set
             setSearchParams(searchParams, { replace: true }); // replace: 주소갱신 true
         }
