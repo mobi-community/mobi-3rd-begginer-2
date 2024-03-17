@@ -13,8 +13,9 @@ const PageNumber = ({ startPage, endPage, params, paginate }) => {
                         $isActive={params === index + startPage}
                         disabled={params === index + startPage}
                         theme={"neonGreenDark"}
-                        text={index + startPage}
-                    />
+                    >
+                        {index + startPage}
+                    </Button>
                 </Li>
             ))}
         </Ul>

@@ -24,10 +24,14 @@ const UserListPage = () => {
 
     // sort button을 보여주기위한 배열
     const sortBtnArr = [
-        { name: "이름순", key: "name" },
-        { name: "생년월일순", key: "birthday" },
-        { name: "전화번호순", key: "phone_number" },
-        { name: "마지막 로그인순", key: "last_login" },
+        { name: "이름순", key: "name", theme: "neonPinkDark" },
+        { name: "생년월일순", key: "birthday", theme: "neonGreenDark" },
+        { name: "전화번호순", key: "phone_number", theme: "neonBlueDarkBlue" },
+        {
+            name: "마지막 로그인순",
+            key: "last_login",
+            theme: "neonOrangeYellow",
+        },
     ];
 
     const perpageOption = [
@@ -141,12 +145,13 @@ const UserListPage = () => {
                 {sortBtnArr.map((button, index) => (
                     <Button
                         key={index}
-                        text={button.name}
-                        theme={"neonBlueDarkBlue"}
+                        theme={button.theme}
                         onClick={() => onClickSortKey(button.key)}
                         disabled={searchParams.get("sort") === button.key}
                         $isActive={searchParams.get("sort") === button.key}
-                    />
+                    >
+                        {button.name}
+                    </Button>
                 ))}
             </SelectPerPageBox>
             <Wrapper>

@@ -73,8 +73,9 @@ const SideMenu = () => {
                                     theme={"neonPinkDark"}
                                     disabled={active === data.url}
                                     $isActive={active === data.url}
-                                    text={data.title}
-                                />
+                                >
+                                    {data.title}
+                                </Button>
                             ))}
                         </Toggle>
                     )}

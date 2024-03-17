@@ -69,18 +69,14 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
             <PageNumberWrapper>
                 <Ul>
                     <Li>
-                        <Button
-                            onClick={prevGroup}
-                            text={"<<"}
-                            theme={"neonGreenDark"}
-                        />
+                        <Button onClick={prevGroup} theme={"neonPinkDark"}>
+                            &lt;&lt;
+                        </Button>
                     </Li>
                     <Li>
-                        <Button
-                            onClick={prevPage}
-                            text={"<"}
-                            theme={"neonGreenDark"}
-                        />
+                        <Button onClick={prevPage} theme={"neonBlueDarkBlue"}>
+                            &lt;
+                        </Button>
                     </Li>
                     <PageNumber
                         startPage={startPage}
@@ -89,18 +85,14 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
                         paginate={paginate}
                     />
                     <Li>
-                        <Button
-                            onClick={nextPage}
-                            text={">"}
-                            theme={"neonGreenDark"}
-                        />
+                        <Button onClick={nextPage} theme={"neonOrangeYellow"}>
+                            &gt;
+                        </Button>
                     </Li>
                     <Li>
-                        <Button
-                            onClick={nextGroup}
-                            text={">>"}
-                            theme={"neonGreenDark"}
-                        />
+                        <Button onClick={nextGroup} theme={"neonOrangeBlue"}>
+                            &gt;&gt;
+                        </Button>
                     </Li>
                 </Ul>
             </PageNumberWrapper>
