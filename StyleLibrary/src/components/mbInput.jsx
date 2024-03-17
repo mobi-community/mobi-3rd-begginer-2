@@ -15,7 +15,8 @@ const MBInput = ({
         (hasIcon ? (
           <img
             className="w-8 h-8 cursor-pointer  hover:scale-125"
-            src={iconUrl || `https://svgsilh.com/svg/1093183.svg`}
+            src={iconUrl}
+            alt="Loadin fail"
           />
         ) : (
           <button className="w-[8rem] h-fit  rounded-[5rem] border-[1px] border-solid border-grayScale-600 hover:bg-theme-mainOppsite-light">
