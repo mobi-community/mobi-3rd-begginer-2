@@ -101,9 +101,7 @@ const Pagination = ({ curPage, setCurPage, userPerPage, userData }) => {
 };
 export default Pagination;
 
-const Wrapper = styled.div`
-    padding-top: 30px;
-`;
+const Wrapper = styled.div``;
 
 const PageNumberWrapper = styled.div`
     display: flex;
