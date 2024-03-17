@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { COLOR } from "../design"
 import type { ReactNode } from "react"
 type CenterBoxProps = {
-  children?: ReactNode //이것도 검색으로 알앗습니다 아그럼 어떻게 하죠?
+  children?: ReactNode 
 }
 
 const CenterBox = ({ children }: CenterBoxProps) => {
