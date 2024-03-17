@@ -3,9 +3,9 @@ import { useSearchParams } from "react-router-dom";
 import { CreateUserData } from "../utils/user-data";
 import { styled } from "styled-components";
 import Pagination from "../components/user-page/pagination";
-import { Select } from "../components/commons/select";
 import Button from "../components/commons/button";
 import { colors } from "../constants/design-tokens/color";
+import Select from "../components/commons/select";
 /**
  * @component
  * @returns {JSX.Element}

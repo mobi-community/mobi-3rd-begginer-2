@@ -1,6 +1,7 @@
+import React from "react";
 import { SSelect } from "../../style/select.style";
 
-export const Select = ({ option, size, theme, value, onChange }) => {
+const Select = ({ option, size, theme, value, onChange }) => {
     return (
         <SSelect size={size} theme={theme} value={value} onChange={onChange}>
             {option.map((option) => (
@@ -11,3 +12,4 @@ export const Select = ({ option, size, theme, value, onChange }) => {
         </SSelect>
     );
 };
+export default Select;

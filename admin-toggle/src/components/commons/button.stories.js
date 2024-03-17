@@ -5,10 +5,12 @@ export default {
     component: Button,
     argTypes: {
         size: {
+            description: "button의 크기를 설정해줍니다.",
             control: { type: "radio" },
             options: ["small", "medium", "large"],
         },
         theme: {
+            description: "button의 색상 테마를 설정해줍니다.",
             control: { type: "radio" },
             options: [
                 "neonPinkDark",
@@ -20,11 +22,12 @@ export default {
             ],
         },
     },
+    tags: ["autodocs"],
 };
 
 const Template = (args) => (
     <div>
-        <Button {...args} />
+        <Button {...args}>button</Button>
     </div>
 );
 
@@ -32,5 +35,4 @@ export const MultipulButton = Template.bind({});
 MultipulButton.args = {
     size: "small",
     theme: "neonPinkDark",
-    text: "button",
 };
