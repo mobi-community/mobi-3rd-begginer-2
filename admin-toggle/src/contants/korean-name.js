@@ -1,4 +1,4 @@
-export const koreanFirstNames = [
+export const koreanFirstNames = Object.freeze([
     "김",
     "이",
     "박",
@@ -19,9 +19,9 @@ export const koreanFirstNames = [
     "송",
     "류",
     "전",
-];
+]);
 
-export const koreanLastNames = [
+export const koreanLastNames = Object.freeze([
     "지훈",
     "서연",
     "현우",
@@ -60,4 +60,4 @@ export const koreanLastNames = [
     "영록",
     "지영",
     "주현",
-];
+]);
