@@ -6,7 +6,7 @@ export default {
     title: "Button",
     component: Button,
     argTypes: {
-        text: { control: "text" },
+        text: { control: "radio" },
     },
 };
 //템플릿 생성. 템플릿을 사용하여 스토리북에 넣어줄 스토리

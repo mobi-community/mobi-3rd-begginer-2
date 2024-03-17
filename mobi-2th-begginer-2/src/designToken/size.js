@@ -54,9 +54,28 @@ const CHECKBOX = {
         height: "35px",
     },
 };
+const INPUT = {
+    mini: {
+        width: "10px",
+        height: "10px",
+    },
+    small: {
+        width: "15px",
+        height: "15px",
+    },
+    medium: {
+        width: "25px",
+        height: "25px",
+    },
+    large: {
+        width: "200px",
+        height: "50px",
+    },
+};
 
 export const SIZES = {
     BUTTON,
     SELECT,
     CHECKBOX,
+    INPUT,
 };
