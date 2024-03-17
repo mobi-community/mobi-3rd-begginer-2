@@ -17,7 +17,7 @@ const UserList = ({ userPerPage, userData, curPage }) => {
     const [textColor, setTextColor] = useState(colors.SUB.neonPurple);
     const [borderColor, setBorderColor] = useState(colors.SUB.neonPurple);
 
-    const currentPage = Number(curPage.get("page"));
+    const currentPage = curPage.get("page");
 
     const lastUserIndex = currentPage * userPerPage;
     const firstUserIndex = lastUserIndex - userPerPage;
