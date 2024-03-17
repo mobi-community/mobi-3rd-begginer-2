@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority"
 
 const MBInput = ({
-  pusrpose,
+  purpose,
   shape = "rectangle",
   iconUrl,
   hasButton = false,
@@ -9,7 +9,7 @@ const MBInput = ({
   buttonText = "버튼",
 }) => {
   return (
-    <div className={WrapperVarinats({ pusrpose, shape })}>
+    <div className={WrapperVariants({ purpose, shape })}>
       <input className="w-[80%] outline-none bg-transparent text-ellipsis" />
       {hasButton &&
         (hasIcon ? (
@@ -28,11 +28,11 @@ const MBInput = ({
 
 export default MBInput
 
-const WrapperVarinats = cva(
+const WrapperVariants = cva(
   "h-[5rem] pl-[1rem] pr-[1rem] flex items-center justify-between border-solid border-[1px] border-grayScale-600 focus-within:bg-theme-main-light ",
   {
     variants: {
-      pusrpose: {
+      purpose: {
         search: "w-[30rem] ",
         resgisterSmall: "w-[20rem]",
         resgisterNormal: "w-[50rem]",
