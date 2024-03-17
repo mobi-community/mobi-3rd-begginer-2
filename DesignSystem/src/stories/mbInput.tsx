@@ -1,6 +1,6 @@
 import type { InputHTMLAttributes } from "react"
 import styled, { css } from "styled-components"
-import { COLOR, FONT_SIZE } from "../design"
+import { COLOR } from "../design"
 
 type MBInputProps = InputHTMLAttributes<HTMLInputElement> & {
   purpose?: PURPOSE_TYPE
@@ -53,7 +53,7 @@ const MBInput = ({
         purpose={purpose}
         placeholder={placeHolder || "palceHolder"}
         {...props}
-      ></CustomInput>
+      />
       {hasButton && (
         <ButtonBase hasIcon={hasIcon}>
           {hasIcon ? (
@@ -74,7 +74,7 @@ const Wrapper = styled.div`
   align-items: center;
 `
 const CustomInput = styled.input<InputCssType>`
-  height: ${FONT_SIZE.small};
+  height: 4rem;
   padding: 1rem;
   cursor: pointer;
   border: 1px solid ${COLOR.grayScale[500]};
@@ -87,6 +87,9 @@ const CustomInput = styled.input<InputCssType>`
 const ButtonBase = styled.button<ButtonCssType>`
   min-width: 2rem;
   min-height: 2rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 0;
   position: relative;
   right: 3.5rem;
   border: none;
