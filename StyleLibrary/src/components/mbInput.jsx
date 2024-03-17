@@ -13,15 +13,9 @@ const MBInput = ({
       <input className="w-[80%] outline-none bg-transparent text-ellipsis" />
       {hasButton &&
         (hasIcon ? (
-          <img
-            className="w-8 h-8 cursor-pointer  hover:scale-125"
-            src={iconUrl}
-            alt="Loadin fail"
-          />
+          <IconComponent iconUrl={iconUrl} />
         ) : (
-          <button className="w-[8rem] h-fit  rounded-[5rem] border-[1px] border-solid border-grayScale-600 hover:bg-theme-mainOppsite-light">
-            {buttonText}
-          </button>
+          <ButtonComponent buttonText={buttonText} />
         ))}
     </div>
   )
@@ -46,4 +40,17 @@ const WrapperVariants = cva(
     },
   }
 )
-//여기가 tailwind로 관리한 input
+
+const ButtonComponent = React.memo(({ buttonText }) => (
+  <button className="w-[8rem] h-fit  rounded-[5rem] border-[1px] border-solid border-grayScale-600 hover:bg-theme-mainOppsite-light">
+    {buttonText}
+  </button>
+))
+
+const IconComponent = React.memo(({ iconUrl }) => (
+  <img
+    className="w-8 h-8 cursor-pointer  hover:scale-125"
+    src={iconUrl}
+    alt="Loading fail"
+  />
+))
