@@ -1,11 +1,8 @@
 import styled from "styled-components"
 import { COLOR } from "../design"
-import type { ReactNode } from "react"
-type CenterBoxProps = {
-  children?: ReactNode 
-}
+import type { PropsWithChildren } from "react"
 
-const CenterBox = ({ children }: CenterBoxProps) => {
+const CenterBox = ({ children }: PropsWithChildren) => {
   return (
     <CenterContainer>
       <MainWrapper>{children}</MainWrapper>
