@@ -49,6 +49,8 @@ const SideMenu = () => {
     ];
 
     const toggleMenu = (name) => {
+        // open 과 name이 같을 때 null인 이유는? close상태이기 때문에 null을 반환
+        // 현재 저장된 sessionStorage의 값과 내가 현재 선택한 title의 값을 비교하여 새로 sessionStorage에 저장하기 위해
         setOpen(open === name ? null : name);
     };
 

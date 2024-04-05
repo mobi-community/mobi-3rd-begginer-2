@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { CreateUserData } from "../utils/user-data";
+import { CreateUserData } from "../utils/create-user-data";
 import { styled } from "styled-components";
 import Pagination from "../components/user-page/pagination";
 import Button from "../components/commons/button";
